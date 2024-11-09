@@ -11,7 +11,7 @@ window.onload = () => {
         let movie = {
             name: allNames[index] ? allNames[index].innerText.trim() : "N/A",
             duration: allDurations[index] ? allDurations[index].innerText.trim() : "N/A",
-            genre: allGenres[index] ? allGenres[index].innerText.trim() : "N/A",
+            genre: allGenres[index] ? allGenres[index].childNodes[0].innerText.trim() : "N/A",
             image: allImages[index] ? allImages[index].src : "N/A",
             isNew: cardWrapper.querySelector('.label--red') ? true : false
         };
