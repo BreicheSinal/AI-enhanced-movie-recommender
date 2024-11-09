@@ -18,8 +18,13 @@ window.onload = () => {
         movies.push(movie);
     });
 
-console.log(movies);
+const jsonData = JSON.stringify(movies, null,2);
 
+const blob = new Blob([jsonData], {type:'application/json'});
 
-    
+const link = document.createElement('a');
+link.href = URL.createObjectURL(blob);
+link.download = 'movies.json';
+
+link.click(); 
 }
