@@ -34,6 +34,9 @@
 .self-center {
   align-self: center;
 }
+.self-start {
+  align-self: flex-start;
+}
 .text-center {
   text-align: center;
 }
@@ -67,4 +70,8 @@
 }
 .bold {
   font-weight: bold;
+}
+.no-border {
+  border: none;
+  border-radius: 20px;
 }

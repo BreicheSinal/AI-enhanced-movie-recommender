@@ -5,28 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/font.css" />
+    <link rel="stylesheet" href="styles/colors.css" />
     <link rel="stylesheet" href="styles/utilities.css" />
     <link rel="stylesheet" href="styles/index.css" />
 
     <title>FlickStream</title>
   </head>
   <body>
-    <div class="container">
-      <div class="header">
+    <div
+      class="hero-section overflow-hidden relative-position text-center black-bg full-width"
+    >
+      <div class="header flex space-between align-center">
         <div class="flex row justify-center align-center">
           <img src="assets/images/logo.png" alt="" />
-          <h1>FlickStream</h1>
+          <h1 class="off-white">FlickStream</h1>
         </div>
-        <button class="sign-in-btn">Sign In</button>
+        <button class="signin-btn no-border primary-bg-color off-white">
+          Sign In
+        </button>
       </div>
-      <div class="content">
-        <h1>Unlimited Movies, TV Shows and Many More</h1>
-        <p>Endless stories, one stream</p>
-        <div class="email-form">
-          <input type="email" placeholder="Enter your email" />
-          <button>Get Started</button>
+      <div class="hero-content absolute-position center off-white">
+        <div class="content flex column">
+          <h1 class="off-white self-start">UNLIMITED MOVIES, TV SHOWS</h1>
+          <h1 class="self-start off-white">AND MANY MORE</h1>
+          <p class="self-start primary-color">ENDLESS STORIES, ONE STREAM</p>
+        </div>
+        <div class="email-form flex flex-start form">
+          <input
+            class="primary-color"
+            type="email"
+            placeholder="Enter your email...."
+          />
+          <button class="no-border primary-bg-color off-white">
+            Get Started
+          </button>
         </div>
       </div>
     </div>
+    <div>HIIIIIII</div>
   </body>
 </html>
