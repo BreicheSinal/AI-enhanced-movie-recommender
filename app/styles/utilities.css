@@ -4,6 +4,9 @@
 .column {
   flex-direction: column;
 }
+.row {
+  flex-direction: row;
+}
 .no-wrap {
   flex-wrap: nowrap;
 }
