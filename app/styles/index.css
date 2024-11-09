@@ -60,4 +60,38 @@ button:hover {
   background-color: #f100c9;
 }
 
+@media (max-width: 1470px) {
+  .hero-content h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+}
 
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 636px) {
+  .content h1 {
+    align-self: center;
+  }
+
+  .content p {
+    align-self: center;
+  }
+  .hero-content h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .form {
+    justify-self: center;
+    flex-direction: column;
+  }
+  .email-form input[type="email"] {
+    width: 100%;
+  }
+}
