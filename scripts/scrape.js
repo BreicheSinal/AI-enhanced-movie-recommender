@@ -12,8 +12,10 @@ window.onload = () => {
             name: allNames[index] ? allNames[index].innerText.trim() : "N/A",
             duration: allDurations[index] ? allDurations[index].innerText.trim() : "N/A",
             genre: allGenres[index] ? allGenres[index].childNodes[0].innerText.trim() : "N/A",
-            image: allImages[index] ? allImages[index].src.split('/').pop().split('?')[0] + '.jpg' : "N/A",
-            isNew: cardWrapper.querySelector('.label--red') ? true : false
+            image: allImages[index] 
+            ? (allImages[index].src.split('/').pop().split('?')[0] + (allImages[index].src.endsWith('.jpg') ? '' : '.jpg')) 
+            : "N/A",
+             isNew: cardWrapper.querySelector('.label--red') ? true : false
         };
         movies.push(movie);
     });
