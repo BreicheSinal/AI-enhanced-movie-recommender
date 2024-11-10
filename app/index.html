@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/font.css" />
+    <link rel="stylesheet" href="styles/colors.css" />
+    <link rel="stylesheet" href="styles/utilities.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>FlickStream</title>
+  </head>
+  <body>
+    <section name="navHero">
+      <div
+        class="hero-section overflow-hidden relative-position text-center black-bg full-width"
+      >
+        <div class="header flex space-between align-center">
+          <div class="flex row justify-center align-center">
+            <img src="assets/images/logo.png" alt="" />
+            <h1 class="off-white">FlickStream</h1>
+          </div>
+          <button class="signin-btn no-border primary-bg-color off-white">
+            Sign In
+          </button>
+        </div>
+        <div class="hero-content absolute-position center off-white">
+          <div class="content flex column">
+            <h1 class="off-white self-start">UNLIMITED MOVIES, TV SHOWS</h1>
+            <h1 class="self-start off-white">AND MANY MORE</h1>
+            <p class="self-start primary-color">ENDLESS STORIES, ONE STREAM</p>
+          </div>
+          <div class="email-form flex flex-start form">
+            <input
+              class="primary-color"
+              type="email"
+              placeholder="Enter your email...."
+            />
+            <button class="no-border primary-bg-color off-white">
+              Get Started
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section name="chatBot">
+      <button id="botBttn" class="botBttn primary-bg-color off-white no-border">
+        UMA
+      </button>
+      <div class="chatbox-wrapper" id="chatbox">
+        <div class="message-box" id="messageBox">
+          <div class="chat flex response">
+            <img src="assets/images/botlogo.png" alt="Chatbot Icon" />
+            <span
+              >Hello there! <br />
+              How can I help you today?
+            </span>
+          </div>
+        </div>
+        <div class="messagebar flex align-center justify-center">
+          <div class="bar-wrapper flex align-center space-between">
+            <input
+              type="text"
+              id="messageInput"
+              placeholder="Enter your message..."
+            />
+            <button
+              id="sendButton"
+              class="sendBttn flex align-center justify-center"
+            >
+              <span class="material-symbols-rounded"> send </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div>HIIIIIIIII</div>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>

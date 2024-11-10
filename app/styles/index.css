@@ -1,0 +1,184 @@
+/* NAVBAR && HERO SECTION */
+.botBttn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px 15px;
+  border-radius: 30px;
+  font-size: 16px;
+}
+
+.chatbox-wrapper {
+  display: none;
+  position: fixed;
+  bottom: 60px;
+  right: 10px;
+  width: 350px;
+  max-height: 500px;
+  background-color: #222426;
+  border: 1px solid #cc00aa;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(204, 0, 170, 0.77);
+}
+
+.message-box {
+  height: 250px;
+  overflow-y: auto;
+  transition: height 0.3s ease;
+}
+
+.chat {
+  gap: 10px;
+  padding: 15px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.chat img {
+  width: 30px;
+  height: 30px;
+}
+
+.response {
+  background-color: #494b59;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.messagebar {
+  height: 5rem;
+  border-top: 1px solid #494b59;
+  background-color: #33343f;
+}
+
+.messagebar .bar-wrapper {
+  background-color: #494b59;
+  border-radius: 5px;
+  width: 85%;
+  padding: 5px;
+}
+
+.bar-wrapper input {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: none;
+  color: #ccc;
+}
+
+.bar-wrapper input::placeholder {
+  color: #ccc;
+}
+
+.messagebar button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.messagebar button:hover {
+  color: #bbb;
+}
+
+.hero-section {
+  min-height: 100vh;
+  background: url("../assets/images/IMG-HREO\ SECTION.png") center center /
+    cover no-repeat;
+  background-color: black;
+}
+
+.header {
+  padding: 8px 20px 8px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.header h1 {
+  font-size: 23px;
+}
+
+.signin-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.hero-content {
+  min-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 15x;
+  margin-bottom: 40px;
+}
+
+.email-form {
+  gap: 10px;
+}
+
+.email-form input[type="email"] {
+  opacity: 35%;
+  padding: 15px;
+  border-radius: 50px;
+  outline: none;
+  width: 60%;
+  border: 2px solid #cc00aa;
+}
+
+.email-form button {
+  padding: 10px 20px;
+  background-color: #cc00aa;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.email-form button:hover {
+  background-color: #f100c9;
+}
+
+@media (max-width: 1470px) {
+  .hero-content h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 636px) {
+  .content h1 {
+    align-self: center;
+  }
+
+  .content p {
+    align-self: center;
+  }
+  .hero-content h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .form {
+    justify-self: center;
+    flex-direction: column;
+  }
+  .email-form input[type="email"] {
+    width: 100%;
+  }
+}
