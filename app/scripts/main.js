@@ -21,3 +21,9 @@ window.onload = async function() {
         window.location.href = 'http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/login.html';
     }
 };
+
+
+document.getElementById("logoutButton").addEventListener("click", function() {
+    // Redirect the user to logout.php to clear the session
+    window.location.href = 'http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/login.html';
+});
