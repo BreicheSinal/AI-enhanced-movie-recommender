@@ -57,3 +57,50 @@ body {
 .success-message {
     color: rgb(111, 240, 216);
 }
+
+
+
+.login-form {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    width: 30%;
+    padding: 60px;
+    border: 1px solid #191818;
+    box-shadow: #191818;
+    border-radius: 20px;
+    background-color: #8d0676;
+}
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.login-group {
+    margin-bottom: 15px;
+}
+.login-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.login-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #1b1919;
+    border-radius: 15px;
+}
+.login-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3015dfda;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.login-group button:hover {
+    background-color: #218877;
+}
+.error-message, .success-message {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px;
+}
