@@ -48,10 +48,19 @@ function addUserMessage(msg) {
   messageBox.appendChild(messageDiv);
 }
 
-function addChatbotPlaceholder() {}
+// adding temproray "..." inside placeholder of bot ressponse
+function addChatbotPlaceholder() {
+  const responseDiv = document.createElement("div");
+  responseDiv.className = "chat flex align-center response";
 
-async function fetchData(userMsg) {}
+  const img = document.createElement("img");
+  img.src = "./assets/images/botlogo.png";
 
-function updateChatbotResponse(msgContent) {}
+  const span = document.createElement("span");
+  span.className = "new";
+  span.textContent = "...";
 
-function showError(errorMsg) {}
+  responseDiv.appendChild(img);
+  responseDiv.appendChild(span);
+  messageBox.appendChild(responseDiv);
+}
