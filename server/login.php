@@ -1,8 +1,9 @@
 <?php 
-session_start();
-
 ini_set('session.gc_maxlifetime', 86400);  // 1 day in seconds
 ini_set('session.cookie_lifetime', 86400);  // Also 1 day
+
+session_start();
+
 
 
 header("Access-Control-Allow-Origin: http://127.0.0.1:5500");  

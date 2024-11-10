@@ -21,7 +21,8 @@ async function submitLogin() {
         const result = await response.json();
         if (result.success) {
             // Redirect to the next page with id as a URL parameter
-            window.location.href = `http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/main.html?id=${result.id}`;
+            // window.location.href = `http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/home.html?id=${result.id}`;
+            window.location.href = `http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/home.html`;
             messageDiv.className = "success-message";
             messageDiv.textContent = "User logged successfully!";
         } else {
