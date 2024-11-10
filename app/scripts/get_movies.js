@@ -22,9 +22,9 @@ fetch('http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-rec
             `
             movieElement.appendChild(bookmark);
             moviesContainer.appendChild(movieElement);
-
-            bookmark.addEventListener('click',()=>toggleBookmark(bookmark, movie));
             
+            checkBookmarkStatus(bookmark,movie);
+            bookmark.addEventListener('click',()=>toggleBookmark(bookmark, movie));
         });
     });
     

@@ -1,11 +1,25 @@
 const user_id = localStorage.getItem("user_id");
 
+function toggleBookmark(bookmark, movie){
+
+    checkBookmarkStatus(bookmark,movie);
+
+    if(bookmark.classList.contains('clicked')){
+        //if already bookmarked, remove it 
+        removeBookmark(bookmark, movie);
+    } else { 
+        //if not bookmarked, add it
+        addBookmark(bookmark, movie);
+    }
+}
+
 function checkBookmarkStatus(bookmark,movie){
     fetch('http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/server/check_bookmark.php',{
         method:'POST',
         headers:{
             "Content-Type":"application/json"
         },
+        //checks if there's a row in bookmark table with these values
         body:JSON.stringify({
             user_id: user_id,
             movie_id: movie.id,
@@ -21,19 +35,6 @@ function checkBookmarkStatus(bookmark,movie){
         }
     })
     .catch(error => console.log(error));
-}
-
-function toggleBookmark(bookmark, movie){
-    
-    checkBookmarkStatus(bookmark,movie);
-
-    if(bookmark.classList.contains('clicked')){
-        //if already bookmarked, remove it 
-        removeBookmark(bookmark, movie);
-    } else { 
-        //if not bookmarked, add it
-        addBookmark(bookmark, movie);
-    }
 }
 
 function addBookmark(bookmark, movie){
