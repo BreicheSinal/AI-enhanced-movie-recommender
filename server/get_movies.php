@@ -19,4 +19,7 @@ while ($row = $result->fetch_assoc()) {
     $movies[] = $row;
 }
 
+header('Content-Type: application/json');
+echo json_encode($movies);
+
 ?>   
