@@ -96,3 +96,10 @@ function updateChatbotResponse(msgContent) {
   botResponse.textContent = msgContent;
   botResponse.classList.remove("new");
 }
+
+// error response of bot
+function showError(errorMsg) {
+  const botResponse = document.querySelector(".response .new");
+  botResponse.textContent = errorMsg;
+  botResponse.classList.remove("new");
+}
