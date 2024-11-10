@@ -15,17 +15,17 @@
   right: 10px;
   width: 350px;
   max-height: 500px;
-  background-color: #33343f;
-  border: 1px solid #494b59;
+  background-color: #222426;
+  border: 1px solid #cc00aa;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(204, 0, 170, 0.77);
 }
 
 .message-box {
-  height: 250px; /* Set the initial height */
+  height: 250px;
   overflow-y: auto;
-  transition: height 0.3s ease; /* Smooth transition for resizing */
+  transition: height 0.3s ease;
 }
 
 .chat {
@@ -84,6 +84,7 @@
 .messagebar button:hover {
   color: #bbb;
 }
+
 .hero-section {
   min-height: 100vh;
   background: url("../assets/images/IMG-HREO\ SECTION.png") center center /
@@ -142,7 +143,7 @@
   font-size: 16px;
 }
 
-button:hover {
+.email-form button:hover {
   background-color: #f100c9;
 }
 
