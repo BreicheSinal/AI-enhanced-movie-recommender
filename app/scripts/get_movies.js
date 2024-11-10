@@ -24,6 +24,7 @@ fetch('http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-rec
             moviesContainer.appendChild(movieElement);
 
             bookmark.addEventListener('click',()=>toggleBookmark(bookmark, movie));
+            
         });
     });
     

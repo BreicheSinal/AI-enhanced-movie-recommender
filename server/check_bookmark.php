@@ -9,22 +9,30 @@ error_reporting(E_ALL);
 
 include 'connection.php';
 
-$user_id = $_POST['user_id'];
-$movie_id = $_POST['movie_id'];
+$data = json_decode(file_get_contents('php://input'), true);
 
-$query = "SELECT * FROM bookmark WHERE user_id = ? AND movie_id = ?";
-$stmt = $conn->prepare($query);
-$stmt->bind_param('ii', $user_id, $movie_id);
-$stmt.execute();
-$result = $stmt -> get_result();
+// Check if the required data is available in the JSON
+if (isset($data['user_id']) && isset($data['movie_id'])) {
+    $user_id = $data['user_id'];
+    $movie_id = $data['movie_id'];
 
-//if movie is bookmarked return true
-if($result->num_rows > 0){
-    echo json_encode(['bookmarked'=>true]);
-}else{
-    echo json_encode(['bookmarked'=>false]);
+    // Check if the movie is bookmarked
+    $query = "SELECT * FROM bookmark WHERE user_id = ? AND movie_id = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param('ii', $user_id, $movie_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    // Return whether the movie is bookmarked or not
+    if ($result->num_rows > 0) {
+        echo json_encode(['bookmarked' => true]);
+    } else {
+        echo json_encode(['bookmarked' => false]);
+    }
+
+    $stmt->close();
+} else {
+    // If user_id or movie_id is not provided, return false
+    echo json_encode(['bookmarked' => false]);
 }
-
-$stmt->close();
-
 ?>

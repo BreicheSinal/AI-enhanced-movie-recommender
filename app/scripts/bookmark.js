@@ -24,6 +24,7 @@ function checkBookmarkStatus(bookmark,movie){
 }
 
 function toggleBookmark(bookmark, movie){
+    
     checkBookmarkStatus(bookmark,movie);
 
     if(bookmark.classList.contains('clicked')){
@@ -53,7 +54,7 @@ function addBookmark(bookmark, movie){
     .then(data => {
         if(data.success){
             console.log('Movie bookmarked');
-            setBookmarked();
+            setBookmarked(bookmark);
         }else{
             console.log('Failed to bookmark', data.message);
         }        
@@ -80,7 +81,7 @@ function removeBookmark(bookmark, movie){
     .then(data => {
         if(data.success){
             console.log('Movie removed from bookmarks');
-            setNotBookmarked();
+            setNotBookmarked(bookmark);
         }else{
             console.log('Failed to bookmark', data.message);
         }        
@@ -90,6 +91,7 @@ function removeBookmark(bookmark, movie){
 
 //set button as clicked
 function setBookmarked(bookmark) {
+    
     bookmark.innerHTML = `
         <svg class='clicked-bookmark' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#FFCC00" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bookmark">
             <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/>
@@ -99,7 +101,7 @@ function setBookmarked(bookmark) {
 }
 
 //set button as not clicked
-function setNotBookmarked() {
+function setNotBookmarked(bookmark) {
     bookmark.innerHTML = `
         <svg class='not-clicked-bookmark' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bookmark">
             <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/>
