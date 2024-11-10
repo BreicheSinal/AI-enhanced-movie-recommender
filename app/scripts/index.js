@@ -66,7 +66,7 @@ function addChatbotPlaceholder() {
 }
 
 // sending post request to open AI API
-async function fetchData(userMessage) {
+async function fetchData(userMsg) {
   const requestOptions = {
     method: "POST", // HTTP method
     headers: {
@@ -76,7 +76,7 @@ async function fetchData(userMessage) {
     body: JSON.stringify({
       // converting body to a JSON string to be sent to API
       model: "gpt-3.5-turbo",
-      messages: [{ role: "user", content: userMessage }],
+      messages: [{ role: "user", content: userMsg }],
     }),
   };
 
@@ -88,4 +88,11 @@ async function fetchData(userMessage) {
 
   const data = await response.json();
   return data.choices[0].message.content;
+}
+
+// updating bot response from "..." to actual response
+function updateChatbotResponse(msgContent) {
+  const botResponse = document.querySelector(".response .new");
+  botResponse.textContent = msgContent;
+  botResponse.classList.remove("new");
 }
