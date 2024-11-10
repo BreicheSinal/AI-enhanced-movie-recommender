@@ -22,6 +22,7 @@ sendBtn.onclick = async function () {
     addUserMessage(userMessage);
     addChatbotPlaceholder();
 
+    //passing user msg to get bot response
     try {
       const response = await fetchData(userMessage);
       updateChatbotResponse(response);
@@ -31,7 +32,21 @@ sendBtn.onclick = async function () {
   }
 };
 
-function addUserMessage(msg) {}
+// adding user msg to chatbox
+function addUserMessage(msg) {
+  const messageDiv = document.createElement("div");
+  messageDiv.className = "chat flex align-center message";
+
+  const img = document.createElement("img");
+  img.src = "./assets/images/userIcon.png";
+
+  const span = document.createElement("span");
+  span.textContent = msg;
+
+  messageDiv.appendChild(img);
+  messageDiv.appendChild(span);
+  messageBox.appendChild(messageDiv);
+}
 
 function addChatbotPlaceholder() {}
 
