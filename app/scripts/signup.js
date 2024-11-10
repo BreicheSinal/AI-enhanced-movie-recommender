@@ -21,8 +21,11 @@ async function submitSignup() {
 
         const result = await response.json();
         if (result.success) {
+            //store user ID in local storage 
+            localStorage.setItem("user_id", result.user_id);
             messageDiv.className = "success-message";
             messageDiv.textContent = "User created successfully!";
+            window.location.href = "http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/home.html";
         } else {
             messageDiv.className = "error-message";
             messageDiv.textContent = result.error || "Error signing up!";

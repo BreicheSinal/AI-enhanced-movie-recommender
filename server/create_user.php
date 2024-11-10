@@ -53,7 +53,8 @@ if (empty($username) || empty($pass) || empty($email)) {
         $insertQuery->bind_param("sssi", $username, $hashedPassword, $email, $userTypeId);
 
         if ($insertQuery->execute()) {
-            echo json_encode(['success' => true]);
+            $userId = $conn->insert_id;
+            echo json_encode(['success' => true, 'user_id' => $userId]);
         } else {
             echo json_encode(['success' => false, 'error' => 'Error creating user']);
         }
