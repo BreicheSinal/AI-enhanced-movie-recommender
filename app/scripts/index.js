@@ -64,3 +64,28 @@ function addChatbotPlaceholder() {
   responseDiv.appendChild(span);
   messageBox.appendChild(responseDiv);
 }
+
+// sending post request to open AI API
+async function fetchData(userMessage) {
+  const requestOptions = {
+    method: "POST", // HTTP method
+    headers: {
+      "Content-Type": "application/json", // content = json
+      Authorization: `Bearer ${apiKey}`, // authorization using API key
+    },
+    body: JSON.stringify({
+      // converting body to a JSON string to be sent to API
+      model: "gpt-3.5-turbo",
+      messages: [{ role: "user", content: userMessage }],
+    }),
+  };
+
+  // sending the req and waiting for a response
+  const response = await fetch(apiURL, requestOptions);
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+
+  const data = await response.json();
+  return data.choices[0].message.content;
+}
