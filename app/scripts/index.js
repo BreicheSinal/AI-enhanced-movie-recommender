@@ -9,14 +9,14 @@ botBttn.addEventListener("click", function () {
 
 const apiURL = "https://api.openai.com/v1/chat/completions";
 const apiKey =
-  "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";
-
+  "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";
 //const apiKey = "";
 
 let msgHistory = [];
 
 //  adding event handler "onclick"
 sendBtn.onclick = async function () {
+  //console.log(here);
   if (messageBar.value.trim().length > 0) {
     const userMessage = messageBar.value.trim(); // trim(): removing spaces
     messageBar.value = ""; // clearing input field
@@ -32,41 +32,47 @@ sendBtn.onclick = async function () {
 
     //passing user msg to get bot response
     try {
-      await saveMsg(userMessage, "user"); // saving user msg in db
+      console.log("Sending message:", userMessage);
+      saveMsg(userMessage, "user"); // saving user msg in db
       const response = await fetchData(userMessage);
+      console.log("Response received:", response);
 
       updateChatbotResponse(response);
-      await saveMsg(response, "bot"); // saving bot response in db
+      saveMsg(response, "bot"); // saving bot response in db
     } catch (error) {
+      console.error("Error details:", error);
       showError("Oops! An error occurred. Please try again.");
     }
   }
 };
 
-// saving msgs in db function
-async function saveMessageToDatabase(message, senderType) {
+function saveMsg(message, senderType) {
   const data = {
     message: message,
     sender_type: senderType,
   };
+  console.log(data); // Check what you're sending
 
-  try {
-    const response = await fetch("saveMsg.php", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
+  axios
+    .post(
+      "http://localhost/Ai-enhanced-movie-recommender/server/saveMsg.php",
+      data,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+    .then(function (response) {
+      if (response.data.status === "Successful") {
+        console.log("Message saved successfully");
+      } else {
+        console.log("Message not saved");
+      }
+    })
+    .catch(function (error) {
+      console.error("Error saving message:", error);
     });
-
-    const result = await response.json();
-
-    if (!result.success) {
-      throw new Error(result.message);
-    }
-  } catch (error) {
-    console.error("Error saving message:", error);
-  }
 }
 
 // adding user msg to chatbox
