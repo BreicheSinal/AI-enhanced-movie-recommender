@@ -32,13 +32,42 @@ sendBtn.onclick = async function () {
 
     //passing user msg to get bot response
     try {
+      await saveMsg(userMessage, "user"); // saving user msg in db
       const response = await fetchData(userMessage);
+
       updateChatbotResponse(response);
+      await saveMsg(response, "bot"); // saving bot response in db
     } catch (error) {
       showError("Oops! An error occurred. Please try again.");
     }
   }
 };
+
+// saving msgs in db function
+async function saveMessageToDatabase(message, senderType) {
+  const data = {
+    message: message,
+    sender_type: senderType,
+  };
+
+  try {
+    const response = await fetch("saveMsg.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.json();
+
+    if (!result.success) {
+      throw new Error(result.message);
+    }
+  } catch (error) {
+    console.error("Error saving message:", error);
+  }
+}
 
 // adding user msg to chatbox
 function addUserMessage(msg) {
