@@ -14,7 +14,22 @@ const apiURL = "https://api.openai.com/v1/chat/completions";
 const apiKey = "";
 
 //  adding event handler "onclick"
-sendBtn.onclick = async function () {};
+sendBtn.onclick = async function () {
+  if (messageBar.value.trim().length > 0) {
+    const userMessage = messageBar.value.trim(); // trim(): removing spaces
+    messageBar.value = ""; // clearing input field
+
+    addUserMessage(userMessage);
+    addChatbotPlaceholder();
+
+    try {
+      const response = await fetchData(userMessage);
+      updateChatbotResponse(response);
+    } catch (error) {
+      showError("Oops! An error occurred. Please try again.");
+    }
+  }
+};
 
 function addUserMessage(msg) {}
 
