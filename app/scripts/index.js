@@ -8,10 +8,12 @@ botBttn.addEventListener("click", function () {
 });
 
 const apiURL = "https://api.openai.com/v1/chat/completions";
-//const apiKey =
-//  "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";
+const apiKey =
+  "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";
 
-const apiKey = "";
+//const apiKey = "";
+
+let msgHistory = [];
 
 //  adding event handler "onclick"
 sendBtn.onclick = async function () {
@@ -21,6 +23,12 @@ sendBtn.onclick = async function () {
 
     addUserMessage(userMessage);
     addChatbotPlaceholder();
+
+    // adding user msg to msghistory
+    msgHistory.push({ role: "user", content: userMessage });
+
+    // trim the history to the last 5 messages (managing token limit)
+    msgHistory = msgHistory.slice(-5);
 
     //passing user msg to get bot response
     try {
@@ -75,7 +83,7 @@ async function fetchData(userMsg) {
     },
     body: JSON.stringify({
       // converting body to a JSON string to be sent to API
-      model: "gpt-3.5-turbo",
+      model: "gpt-3.5-turbo-0125",
       messages: [{ role: "user", content: userMsg }],
     }),
   };
@@ -87,6 +95,7 @@ async function fetchData(userMsg) {
   }
 
   const data = await response.json();
+  console.log("API Response:", data);
   return data.choices[0].message.content;
 }
 
