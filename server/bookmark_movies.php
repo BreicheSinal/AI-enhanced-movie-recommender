@@ -12,9 +12,9 @@ include 'connection.php';
 //gets the raw POST data which is a JSON
 $data = json_decode(file_get_contents('php://input'), true);
 
-if (isset($data['movie_id'])) {
+if (isset($data['movie_id']) && isset($data['user_id'])) {
     $movie_id = $data['movie_id'];
-    $user_id = 1;
+    $user_id = $data['user_id'];
 
     $addBookmarkedMovie = 'INSERT INTO bookmark (user_id, movie_id) VALUES (?,?)'; 
     if($query = $conn->prepare($addBookmarkedMovie)){
