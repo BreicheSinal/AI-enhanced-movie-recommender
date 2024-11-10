@@ -6,6 +6,7 @@ fetch('http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-rec
         movies.forEach(movie => {
             const movieElement = document.createElement('div');
             const bookmark = document.createElement('span');
+            bookmark.setAttribute('title','Bookmark');
 
             movieElement.innerHTML=`
             <p>${movie.title}</p>
@@ -22,7 +23,7 @@ fetch('http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-rec
             movieElement.appendChild(bookmark);
             moviesContainer.appendChild(movieElement);
 
-            bookmark.addEventListener('click',()=>click(bookmark))
+            bookmark.addEventListener('click',()=>bookmarkMovie(bookmark, movie))
         });
     });
     
