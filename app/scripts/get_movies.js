@@ -1,6 +1,16 @@
+let moviesArray = [];
+
 fetch('http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/server/get_movies.php')
     .then(response => response.json())
     .then(movies => {
+        console.log('Fetched Movies:', movies);
+
+
+        moviesArray = movies;
+
+        // Log the movies array to the console
+        console.log(moviesArray)
+
         const moviesContainer = document.getElementById("movies-container");
 
         movies.forEach(movie => {

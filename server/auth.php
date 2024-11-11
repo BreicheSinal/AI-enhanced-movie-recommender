@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-header("Access-Control-Allow-Origin: http://127.0.0.1:5500");  // Change to match your frontend's origin
+header("Access-Control-Allow-Origin: *");  // Change to match your frontend's origin
 header("Access-Control-Allow-Methods: GET, POST");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Allow-Credentials: true");
