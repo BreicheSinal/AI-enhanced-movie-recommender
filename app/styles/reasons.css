@@ -1,1 +1,17 @@
 @import url(../styles/font.css);
+
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px; /* spacing between cards */
+    max-width: 600px; /* optional: set a max width */
+    margin: auto; /
+}
+
+.card {
+    padding: 20px;
+    background-color: #272727;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+}
