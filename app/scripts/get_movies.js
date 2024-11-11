@@ -40,7 +40,6 @@ fetch('http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-rec
 
             ratingStars.addEventListener('click', (event) => {
                 const rateValue = event.target.parentElement.id.split('-').pop();
-                console.log(rateValue);
                 addRating(rateValue,movie);
             });
         });

@@ -1,3 +1,5 @@
+const user_id = localStorage.getItem("user_id");
+
 function toggleBookmark(bookmark, movie){
 
     checkBookmarkStatus(bookmark,movie);
