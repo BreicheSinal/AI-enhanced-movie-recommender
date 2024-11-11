@@ -1,7 +1,7 @@
 @import url(font.css);
 
 footer{
-    height: 80vh;
+    height: 85vh;
     background-color: #222426;
     color: white;
 }
@@ -13,14 +13,14 @@ footer{
 }
 
 .footer-logo-container > p{
-    font-family: 'Roboto Bold';
+    font-family: 'Roboto Black';
     font-size: 1.2rem;
 }
 
 footer > div:nth-child(2){
     justify-content: space-around;
     align-items: flex-start;
-    padding-top: 30px;
+    padding-top: 50px;
     padding-inline: 0px;
     height: auto;
 }
@@ -29,7 +29,40 @@ footer > div:nth-child(2){
     width: 15%;
 }
 
+.footer-subcontainer:nth-child(5), .footer-subcontainer:nth-child(3){
+    width: 10%;
+}
+
 .footer-subcontainer > h2{
-    font-size: 0.9rem;
+    font-size: 0.99rem;
     color: #cc00aa;
+    margin-bottom: 20px;
+    font-family: 'Roboto Black';
+}
+
+.footer-links{
+    gap: 10px;
+}
+
+.footer-links a{
+    font-family: 'Roboto Thin';
+    cursor: pointer;
+}
+
+.footer-social-media{
+    margin-top: 40px;
+}
+
+.footer-social-media > div:nth-child(1){
+    gap: 15px;
+}
+
+.footer-social-media > div:nth-child(1) > svg{
+    cursor: pointer;
+}
+
+.footer-social-media > p{
+    font-family: 'Roboto Thin';
+    font-size: 0.6rem;
+    padding-top: 5px;
 }
