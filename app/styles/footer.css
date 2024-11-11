@@ -17,3 +17,19 @@ footer{
     font-size: 1.2rem;
 }
 
+footer > div:nth-child(2){
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 30px;
+    padding-inline: 0px;
+    height: auto;
+}
+
+.footer-subcontainer{
+    width: 15%;
+}
+
+.footer-subcontainer > h2{
+    font-size: 0.9rem;
+    color: #cc00aa;
+}
