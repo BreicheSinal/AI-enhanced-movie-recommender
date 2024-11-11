@@ -39,6 +39,7 @@ fetch('http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-rec
             bookmark.addEventListener('click',()=>toggleBookmark(bookmark, movie));
 
             ratingStars.addEventListener('click', (event) => {
+                //the star id is passed as e.g. star-1-5, so just get the last number which is the rate value
                 const rateValue = event.target.parentElement.id.split('-').pop();
                 addRating(rateValue,movie);
             });

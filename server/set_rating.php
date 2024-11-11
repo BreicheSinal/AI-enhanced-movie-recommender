@@ -16,10 +16,5 @@ if (isset($data['movie_id']) && isset($data['user_id']) && isset($data['rate_val
     $user_id = $data['user_id'];
     $rate_value = $data['rate_value'];
 
-    echo json_encode([
-        'status' => 'success',
-        'movie_id' => $movie_id,
-        'user_id' => $user_id,
-        'rate_value' => $rate_value
-    ]);
+    
 }

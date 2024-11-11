@@ -16,6 +16,7 @@ if (isset($data['movie_id']) && isset($data['user_id'])) {
     $movie_id = $data['movie_id'];
     $user_id = $data['user_id'];
 
+    //checks if movie is bookmarked or not
     $checkBookmark = 'SELECT * FROM bookmark WHERE user_id = ? AND movie_id = ?';
     $checkQuery = $conn->prepare($checkBookmark);
     $checkQuery->bind_param('ii',$user_id, $movie_id);
