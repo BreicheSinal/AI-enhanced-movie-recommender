@@ -1,0 +1,35 @@
+@import url(font.css);
+
+.section4{
+    padding-bottom: 50px;
+}
+
+.reasons-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+    max-width: 900px; 
+    margin: auto;
+    padding: 10px;
+}
+
+.reason-card {
+    padding: 20px;
+    background-color: #272727;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 8px #cc00aa80;
+    height: 150px;
+    font-family:'Roboto Black'; 
+    font-size: 1.2rem;
+}
+
+.reason-card-icon{
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    width: 55px; 
+    height: auto;
+}
+
