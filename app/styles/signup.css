@@ -1,106 +1,113 @@
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: black;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+.bg {
+  background: url("../assets/images/IMG-HREO\ SECTION.png") center center /
+    cover no-repeat;
+  background-color: black;
 }
 .signup-form {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    width: 30%;
-    padding: 60px;
-    border: 1px solid #191818;
-    box-shadow: #191818;
-    border-radius: 20px;
-    background-color: #8d0676;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 30%;
+  padding: 60px;
+  border: 1px solid #191818;
+  box-shadow: #191818;
+  border-radius: 20px;
+  background-color: #8d0676;
 }
 .signup-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 .form-group {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 .form-group label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 .form-group input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #1b1919;
-    border-radius: 15px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #1b1919;
+  border-radius: 15px;
 }
 .form-group button {
-    width: 100%;
-    padding: 10px;
-    background-color: #3015dfda;
-    border: none;
-    border-radius: 3px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  background-color: #3015dfda;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
 }
 .form-group button:hover {
-    background-color: #218877;
+  background-color: #218877;
 }
-.error-message, .success-message {
-    text-align: center;
-    font-size: 14px;
-    margin-top: 15px;
+.error-message,
+.success-message {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 15px;
 }
 .error-message {
-    color: red;
+  color: red;
 }
 .success-message {
-    color: rgb(111, 240, 216);
+  color: rgb(111, 240, 216);
 }
-
-
 
 .login-form {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    width: 30%;
-    padding: 60px;
-    border: 1px solid #191818;
-    box-shadow: #191818;
-    border-radius: 20px;
-    background-color: #8d0676;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 30%;
+  padding: 60px;
+  border: 1px solid #cc00aa;
+  box-shadow: #191818;
+  border-radius: 20px;
+  background-color: black;
 }
 .login-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 .login-group {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 .login-group label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 .login-group input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #1b1919;
-    border-radius: 15px;
+  opacity: 30%;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #1b1919;
+  border-radius: 15px;
 }
 .login-group button {
-    width: 100%;
-    padding: 10px;
-    background-color: #3015dfda;
-    border: none;
-    border-radius: 3px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  background-color: #cc00aa;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
 }
 .login-group button:hover {
-    background-color: #218877;
+  background-color: #8d0676;
 }
-.error-message, .success-message {
-    text-align: center;
-    font-size: 14px;
-    margin-top: 15px;
+.error-message,
+.success-message {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 15px;
 }
