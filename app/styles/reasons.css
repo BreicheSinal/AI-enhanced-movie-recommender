@@ -1,17 +1,21 @@
 @import url(../styles/font.css);
 
+
 .cards-container{
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 20px; /* spacing between cards */
-    max-width: 600px; /* optional: set a max width */
-    margin: auto; /
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+    max-width: 900px; 
+    margin: auto;
+    padding: 10px;
 }
 
 .card {
     padding: 20px;
     background-color: #272727;
-    border-radius: 8px;
+    border-radius: 20px;
     text-align: center;
     color: white;
+    height: 150px;
+    font-family:'Roboto Regular'; 
 }

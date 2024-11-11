@@ -15,6 +15,6 @@ button {
 .subtitle{
   font-family: 'Roboto Bold';
   color: #cc00aa;
-  margin-top: 20px;
-  margin-left: 20px;
+  padding: 25px;
+  font-size: 2rem;
 }
