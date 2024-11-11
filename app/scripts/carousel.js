@@ -59,7 +59,7 @@ const movies = [
         release_year: '2022',
         genre: 'Thriller',
         duration: '110 min',
-        image_url: 'http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/assets/images/img5.jpg'
+        image_url: 'http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app//assets/images/img3.jpeg'
     },
     {
         title: 'New Movie 2',
@@ -67,15 +67,14 @@ const movies = [
         release_year: '2023',
         genre: 'Fantasy',
         duration: '100 min',
-        image_url: 'http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/assets/images/img6.jpg'
+        image_url: 'http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app//assets/images/img3.jpeg'
     },
-    // Add more movie objects as needed
+  
 ];
 
   const carouselContainer = document.querySelector('.carousel');
-  const carouselContainer2 = document.querySelector('.carousel-2');
+  const carouselContainer2 = document.querySelector('.carousel2');
 
-// Function to render movie cards
 function renderMovies() {
     carouselContainer.innerHTML = ''; // Clear existing cards
 
@@ -93,10 +92,8 @@ function renderMovies() {
     });
 }
 
-// Initial render
 renderMovies();
 
-// Carousel controls
 let currentIndex = 0;
 
 document.querySelector('.next-btn').addEventListener('click', () => {
@@ -116,10 +113,9 @@ document.querySelector('.prev-btn').addEventListener('click', () => {
 });
 
 function rotateCarousel() {
-    // Shift the array based on the current index
+
     const rotatedMovies = [...movies.slice(currentIndex), ...movies.slice(0, currentIndex)];
     
-    // Clear and re-render the carousel with rotated movies
     carouselContainer.innerHTML = '';
     rotatedMovies.forEach(movie => {
         const movieCard = document.createElement('div');
@@ -155,5 +151,42 @@ function renderNewMovies() {
   });
 }
 
-// Initial render for the new carousel
 renderNewMovies();
+
+
+let currentIndex2 = 0;
+
+document.querySelector('.next-btn-2').addEventListener('click', () => {
+    currentIndex2++;
+    if (currentIndex2 > newMovies.length - 1) {
+        currentIndex2 = 0;
+    }
+    rotateCarousel2();
+});
+
+document.querySelector('.prev-btn-2').addEventListener('click', () => {
+    currentIndex2--;
+    if (currentIndex2 < 0) {
+        currentIndex2 = newMovies.length - 1;
+    }
+    rotateCarousel2();
+});
+
+function rotateCarousel2() {
+    // Shift the array based on the current index
+    const rotatedMovies = [...newMovies.slice(currentIndex2), ...newMovies.slice(0, currentIndex2)];
+
+    carouselContainer2.innerHTML = '';
+    rotatedMovies.forEach(movie => {
+        const movieCard = document.createElement('div');
+        movieCard.classList.add('movie-card');
+
+        movieCard.innerHTML = `
+            <img src="${movie.image_url}" alt="${movie.title}">
+            <h3>${movie.title}</h3>
+            <p>${movie.genre} | ${movie.duration}</p>
+        `;
+        
+        carouselContainer2.appendChild(movieCard);
+    });
+}
