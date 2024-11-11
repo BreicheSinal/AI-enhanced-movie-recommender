@@ -21,7 +21,8 @@
     color: white;
     box-shadow: 0 4px 8px #cc00aa80;
     height: 150px;
-    font-family:'Roboto Regular'; 
+    font-family:'Roboto Black'; 
+    font-size: 1.2rem;
 }
 
 .reason-card-icon{
