@@ -8,6 +8,7 @@ body {
   background-color: black;
   color: white;
 }
+
 .bg {
   background: url("../assets/images/IMG-HREO\ SECTION.png") center center /
     cover no-repeat;
@@ -17,10 +18,10 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 30%;
   padding: 60px;
-  border: 1px solid #191818;
+  border: 1px solid #cc00aa;
   box-shadow: #191818;
   border-radius: 20px;
-  background-color: #8d0676;
+  background-color: black;
 }
 .signup-form h2 {
   text-align: center;
@@ -42,15 +43,15 @@ body {
 .form-group button {
   width: 100%;
   padding: 10px;
-  background-color: #3015dfda;
+  background-color: #cc00aa;
   border: none;
-  border-radius: 3px;
+  border-radius: 20px;
   color: white;
   font-size: 16px;
   cursor: pointer;
 }
 .form-group button:hover {
-  background-color: #218877;
+  background-color: #8d0676;
 }
 .error-message,
 .success-message {
