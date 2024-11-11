@@ -9,7 +9,7 @@ function addRating(rateValue,movie){
             body:JSON.stringify({
                 user_id:user_id,
                 movie_id: movie.id,
-                rating_id:rateValue,
+                rate_value:rateValue,
             })
         }
     )
