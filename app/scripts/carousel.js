@@ -67,7 +67,39 @@ const movies = [
         release_year: '2023',
         genre: 'Fantasy',
         duration: '100 min',
+        image_url: 'http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app//assets/images/img1.jpg'
+    },
+    {
+        title: 'New Movie 2',
+        description: 'Description of New Movie 2',
+        release_year: '2023',
+        genre: 'Fantasy',
+        duration: '100 min',
         image_url: 'http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app//assets/images/img3.jpeg'
+    },
+    {
+        title: 'New Movie 2',
+        description: 'Description of New Movie 2',
+        release_year: '2023',
+        genre: 'Fantasy',
+        duration: '100 min',
+        image_url: 'http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app//assets/images/img1.jpg'
+    },
+    {
+        title: 'New Movie 2',
+        description: 'Description of New Movie 2',
+        release_year: '2023',
+        genre: 'Fantasy',
+        duration: '100 min',
+        image_url: 'http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app//assets/images/img3.jpeg'
+    },
+    {
+        title: 'New Movie 2',
+        description: 'Description of New Movie 2',
+        release_year: '2023',
+        genre: 'Fantasy',
+        duration: '100 min',
+        image_url: 'http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app//assets/images/img1.jpg'
     },
   
 ];
@@ -137,17 +169,17 @@ function rotateCarousel() {
 function renderNewMovies() {
   carouselContainer2.innerHTML = ''; // Clear existing cards
 
-  newMovies.forEach(movie => {
-      const movieCard = document.createElement('div');
-      movieCard.classList.add('movie-card');
+  newMovies.forEach(movie2 => {
+      const movieCard2 = document.createElement('div');
+      movieCard2.classList.add('movie-card');
       
-      movieCard.innerHTML = `
-          <img src="${movie.image_url}" alt="${movie.title}">
-          <h3>${movie.title}</h3>
-          <p>${movie.genre} | ${movie.duration}</p>
+      movieCard2.innerHTML = `
+          <img src="${movie2.image_url}" alt="${movie2.title}">
+          <h3>${movie2.title}</h3>
+          <p>${movie2.genre} | ${movie2.duration}</p>
       `;
       
-      carouselContainer2.appendChild(movieCard);
+      carouselContainer2.appendChild(movieCard2);
   });
 }
 
@@ -156,7 +188,7 @@ renderNewMovies();
 
 let currentIndex2 = 0;
 
-document.querySelector('.next-btn-2').addEventListener('click', () => {
+document.querySelector('.next-btn2').addEventListener('click', () => {
     currentIndex2++;
     if (currentIndex2 > newMovies.length - 1) {
         currentIndex2 = 0;
@@ -164,7 +196,7 @@ document.querySelector('.next-btn-2').addEventListener('click', () => {
     rotateCarousel2();
 });
 
-document.querySelector('.prev-btn-2').addEventListener('click', () => {
+document.querySelector('.prev-btn2').addEventListener('click', () => {
     currentIndex2--;
     if (currentIndex2 < 0) {
         currentIndex2 = newMovies.length - 1;
