@@ -16,5 +16,14 @@ if (isset($data['movie_id']) && isset($data['user_id']) && isset($data['rate_val
     $user_id = $data['user_id'];
     $rate_value = $data['rate_value'];
 
-    
+    $query = 'INSERT INTO rating (user_id, movie_id, rate_value) VALUES (?,?,?)';
+    $add_query = $conn->prepare($query); 
+    $add_query->bind_param('iii',$user_id, $movie_id, $rate_value);
+    if($add_query->execute()){
+        echo json_encode(['success'=>true, 'message'=>'Rating Added']);
+    }else{
+        echo json_encode(['success'=>false, 'message'=>'Failed to Add Rating']);
+    }
 }
+
+?>
