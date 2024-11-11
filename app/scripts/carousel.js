@@ -52,8 +52,28 @@ const movies = [
     }
   ];
   
+  const newMovies = [
+    {
+        title: 'New Movie 1',
+        description: 'Description of New Movie 1',
+        release_year: '2022',
+        genre: 'Thriller',
+        duration: '110 min',
+        image_url: 'http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/assets/images/img5.jpg'
+    },
+    {
+        title: 'New Movie 2',
+        description: 'Description of New Movie 2',
+        release_year: '2023',
+        genre: 'Fantasy',
+        duration: '100 min',
+        image_url: 'http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/assets/images/img6.jpg'
+    },
+    // Add more movie objects as needed
+];
 
   const carouselContainer = document.querySelector('.carousel');
+  const carouselContainer2 = document.querySelector('.carousel-2');
 
 // Function to render movie cards
 function renderMovies() {
@@ -114,3 +134,26 @@ function rotateCarousel() {
         carouselContainer.appendChild(movieCard);
     });
 }
+
+
+
+
+function renderNewMovies() {
+  carouselContainer2.innerHTML = ''; // Clear existing cards
+
+  newMovies.forEach(movie => {
+      const movieCard = document.createElement('div');
+      movieCard.classList.add('movie-card');
+      
+      movieCard.innerHTML = `
+          <img src="${movie.image_url}" alt="${movie.title}">
+          <h3>${movie.title}</h3>
+          <p>${movie.genre} | ${movie.duration}</p>
+      `;
+      
+      carouselContainer2.appendChild(movieCard);
+  });
+}
+
+// Initial render for the new carousel
+renderNewMovies();
