@@ -1,0 +1,25 @@
+
+
+.popular-now {
+    height: 55vh;
+    width: 100%;
+    text-align: center;
+    background-color: #131415;
+  }
+
+  .popular-now>h2{
+    color: #CC00AA;
+    padding-top: 30px;
+  }
+
+  
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 30px;
+    margin-left: 15%;
+  }
+  
+  
