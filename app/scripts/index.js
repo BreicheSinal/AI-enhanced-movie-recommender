@@ -55,7 +55,7 @@ function saveMsg(message, senderType) {
 
   axios
     .post(
-      "http://localhost/Ai-enhanced-movie-recommender/server/saveMsg.php",
+      "http://localhost/AI-enhanced-movie-recommender-main/Ai-enhanced-movie-recommender/server/saveMsg.php",
       data,
       {
         headers: {
@@ -119,7 +119,17 @@ async function fetchData(userMsg) {
     body: JSON.stringify({
       // converting body to a JSON string to be sent to API
       model: "gpt-3.5-turbo-0125",
-      messages: [{ role: "user", content: userMsg }],
+      messages: [
+        {
+          role: "system",
+          content:
+            "You are a helpful movie assistant. You can answer questions about movies, summarize their plots, and provide personalized movie recommendations based on user preferences. Please provide responses related to movies only.",
+        },
+        {
+          role: "user",
+          content: userMsg,
+        },
+      ],
     }),
   };
 
