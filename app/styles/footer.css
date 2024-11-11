@@ -1,0 +1,18 @@
+@import url(font.css);
+
+footer{
+    height: 80vh;
+    background-color: #222426;
+    color: white;
+}
+
+.footer-logo-container{
+    padding-top: 30px;
+    padding-left: 50px;
+    align-items: center;
+}
+
+.footer-logo-container > p{
+    font-family: 'Roboto Bold';
+    font-size: 1.2rem;
+}
