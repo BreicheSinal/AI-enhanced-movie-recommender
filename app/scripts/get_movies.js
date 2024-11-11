@@ -38,6 +38,11 @@ fetch('http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-rec
             
             checkBookmarkStatus(bookmark,movie);
             bookmark.addEventListener('click',()=>toggleBookmark(bookmark, movie));
+
+            ratingStars.addEventListener('click', (event) => {
+                console.log(event.target.parentElement.id);
+                addRating(event.target.parentElement.id,movie);
+            });
         });
     });
     
