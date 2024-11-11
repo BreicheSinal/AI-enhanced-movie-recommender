@@ -16,6 +16,7 @@ if (isset($data['movie_id']) && isset($data['user_id']) && isset($data['rate_val
     $user_id = $data['user_id'];
     $rate_value = $data['rate_value'];
 
+    //checks if user has already rated the movie
     $check_query = $conn->prepare('SELECT * FROM rating WHERE user_id=? AND movie_id=?');
     $check_query->bind_param('ii',$user_id, $movie_id);
 
@@ -23,8 +24,10 @@ if (isset($data['movie_id']) && isset($data['user_id']) && isset($data['rate_val
     $check_query->store_result();
 
     if($check_query->num_rows>0){
+        //user already rated the movie
         echo json_encode(['success'=>false,'message'=>'Movie is already rated']);
     }else{
+        //user didn't rate the movie yet, so insert
         $query = 'INSERT INTO rating (user_id, movie_id, rate_value) VALUES (?,?,?)';
         $add_query = $conn->prepare($query); 
         $add_query->bind_param('iii',$user_id, $movie_id, $rate_value);
