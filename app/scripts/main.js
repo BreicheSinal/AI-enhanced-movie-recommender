@@ -25,6 +25,8 @@ window.onload = async function() {
 
 document.getElementById("logoutButton").addEventListener("click", function() {
     // Redirect the user to logout.php to clear the session
+    
+    localStorage.clear();
     window.location.href = 'http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/login.html';
 });
 

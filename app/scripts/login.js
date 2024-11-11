@@ -3,7 +3,7 @@ async function submitLogin() {
     const password = document.getElementById("password").value;
     const messageDiv = document.getElementById("message");
 
-    // to reset message
+    // resit mesg
     messageDiv.textContent = "";
 
     try {
@@ -20,7 +20,9 @@ async function submitLogin() {
 
         const result = await response.json();
         if (result.success) {
-            // Redirect to the next page with id as a URL parameter
+            localStorage.setItem("user_id", result.id);
+            localStorage.setItem("user_type", result.user_type);
+            
             window.location.href = `http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/main.html?id=${result.id}`;
             messageDiv.className = "success-message";
             messageDiv.textContent = "User logged successfully!";
@@ -34,3 +36,5 @@ async function submitLogin() {
         messageDiv.textContent = "An error occurred. Please try again.";
     }
 }
+
+document.getElementById("loginButton").addEventListener("click", submitLogin);
