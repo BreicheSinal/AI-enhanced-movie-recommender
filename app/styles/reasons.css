@@ -19,6 +19,7 @@
     border-radius: 20px;
     text-align: center;
     color: white;
+    box-shadow: 0 4px 8px #cc00aa80;
     height: 150px;
     font-family:'Roboto Regular'; 
 }
