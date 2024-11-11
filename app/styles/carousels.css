@@ -1,7 +1,7 @@
 
 
 .popular-now {
-    height: 55vh;
+    height: auto;
     width: 100%;
     text-align: center;
     background-color: #131415;
@@ -19,7 +19,7 @@
     position: relative;
     overflow: hidden;
     padding-top: 30px;
-    margin-left: 15%;
+    padding-left: 30px;
   }
   
   .carousel {
@@ -119,10 +119,11 @@
 
 
 .coming-soon{
-  height: 55vh;
+  height: auto;
   width: 100%;
   text-align: center;
   background-color: #131415;
+  padding-bottom: 40px;
 }
 
 .coming-soon>h2{
@@ -137,7 +138,7 @@
   position: relative;
   overflow: hidden;
   padding-top: 30px;
-  margin-left: 15%;
+  padding-left: 30px;
 }
 
 .carousel2 {

@@ -8,7 +8,7 @@ footer{
 
 .footer-logo-container{
     padding-top: 30px;
-    padding-left: 50px;
+    padding-left: 40px;
     align-items: center;
 }
 
@@ -65,6 +65,14 @@ footer > div:nth-child(2){
     font-family: 'Roboto Thin';
     font-size: 0.6rem;
     padding-top: 5px;
+}
+
+.footer-social-media svg {
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-social-media svg:hover {
+    transform: translateY(-5px); 
 }
 
 @media (max-width: 850px) {
