@@ -71,3 +71,22 @@ function readURLsFromFile(filePath) {
   const fileContent = fs.readFileSync(filePath, "utf8");
   return fileContent.split("\n"); // new line
 }
+
+// looping through the urls and scraping
+async function main() {
+    const urls = readURLsFromFile("urls.txt");
+
+    let allData = []; 
+  
+    for (const url of urls) {
+      const data = await scrapeWithPuppeteer(url);
+      allData = allData.concat(data); 
+    }
+  
+    // writing scraped data into a json file
+    fs.writeFileSync("filmsData.json", JSON.stringify(allData, null, 2));
+  
+    console.log("All data has been saved to filmsData.json");
+  }
+  
+  main();
