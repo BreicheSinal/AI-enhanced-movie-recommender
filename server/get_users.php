@@ -9,7 +9,9 @@ if ($_SESSION['user_type'] !== 'admin') {
 
 include 'connection.php';
 
-$sql = "SELECT username, email, (SELECT user_type FROM user_type WHERE user_type_id = users.user_type_id) AS user_type FROM users";
+$sql = "SELECT id, username, email, 
+        (SELECT user_type FROM user_type WHERE user_type_id = users.user_type_id) AS user_type 
+        FROM users";
 $result = $conn->query($sql);
 
 $users = [];
@@ -18,4 +20,6 @@ while ($row = $result->fetch_assoc()) {
 }
 
 echo json_encode(['success' => true, 'users' => $users]);
+
+$conn->close();
 ?>

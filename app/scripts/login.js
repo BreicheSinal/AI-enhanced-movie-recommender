@@ -20,6 +20,11 @@ async function submitLogin() {
 
         const result = await response.json();
         if (result.success) {
+
+            console.log(result);
+            localStorage.setItem("user_id", result.id);
+            localStorage.setItem("user_type", result.user_type);
+            
             // Redirect to the next page with id as a URL parameter
             window.location.href = `http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/main.html?id=${result.id}`;
             messageDiv.className = "success-message";

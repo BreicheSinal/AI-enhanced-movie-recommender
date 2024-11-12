@@ -12,7 +12,6 @@ window.onload = async function() {
             alert(result.error || 'Session expired. Redirecting to login.');
             window.location.href = 'http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/login.html';
         } else {
-            // Display the username or any other user-specific data
             document.getElementById("welcomeMessage").textContent = `Welcome, ${result.username}`;
         }
     } catch (error) {
@@ -23,9 +22,30 @@ window.onload = async function() {
 };
 
 
-document.getElementById("logoutButton").addEventListener("click", function() {
-    // Redirect the user to logout.php to clear the session
-    window.location.href = 'http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/login.html';
+document.getElementById("logoutButton").addEventListener("click", async function() {
+    localStorage.removeItem("user_id");
+    localStorage.removeItem("user_type");
+
+    try {
+        const response = await fetch("http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/server/logout.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            credentials: 'include'  
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            window.location.href = 'http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/login.html';
+        } else {
+            alert("Failed to log out. Please try again.");
+        }
+    } catch (error) {
+        console.error("Logout error:", error);
+        alert("An error occurred during logout. Please try again.");
+    }
 });
 
 
@@ -38,7 +58,6 @@ fetch('http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-rec
 
         moviesArray = movies;
 
-        // Log the movies array to the console
         console.log(moviesArray)
 
         const moviesContainer = document.getElementById("movies-container");
