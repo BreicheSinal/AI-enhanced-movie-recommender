@@ -65,3 +65,9 @@ async function scrapeWithPuppeteer(url) {
 
   return scrapedData;
 }
+
+// reading urls from 'url.txt' and returning them as an array
+function readURLsFromFile(filePath) {
+  const fileContent = fs.readFileSync(filePath, "utf8");
+  return fileContent.split("\n"); // new line
+}
