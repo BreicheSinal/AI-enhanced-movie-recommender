@@ -16,7 +16,7 @@ if (!isset($_SESSION['id']) || !isset($_SESSION['username'])) {
     exit();
 }
 
-// Optionally check if URL ID matches session ID
+// check if URL ID matches session ID
 if (isset($_GET['id']) && $_GET['id'] != $_SESSION['id']) {
     echo json_encode([
         'success' => false,
