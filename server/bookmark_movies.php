@@ -16,6 +16,7 @@ if (isset($data['movie_id']) && isset($data['user_id'])) {
     $movie_id = $data['movie_id'];
     $user_id = $data['user_id'];
 
+    //checks if movie is bookmarked or not
     $checkBookmark = 'SELECT * FROM bookmark WHERE user_id = ? AND movie_id = ?';
     $checkQuery = $conn->prepare($checkBookmark);
     $checkQuery->bind_param('ii',$user_id, $movie_id);
@@ -38,7 +39,7 @@ if (isset($data['movie_id']) && isset($data['user_id'])) {
                 echo json_encode(['success' => false, 'message' => 'Failed to prepare delete query']);
             }
     } else {
-        // Movie not bookmarked, add it
+        // movie not bookmarked, add it
         $addQuery = 'INSERT INTO bookmark (user_id, movie_id) VALUES (?, ?)';
         $addStmt = $conn->prepare($addQuery);
         $addStmt->bind_param('ii', $user_id, $movie_id);

@@ -1,3 +1,5 @@
+@import url(font.css);
+
 /* NAVBAR && HERO SECTION */
 .botBttn {
   position: fixed;
@@ -6,6 +8,8 @@
   padding: 10px 15px;
   border-radius: 30px;
   font-size: 16px;
+  font-family: 'Roboto Bold';
+  z-index: 10;
 }
 
 .chatbox-wrapper {
@@ -20,6 +24,7 @@
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(204, 0, 170, 0.77);
+  z-index: 10;
 }
 
 .message-box {
@@ -100,11 +105,13 @@
 
 .header h1 {
   font-size: 23px;
+  font-family: 'Roboto Bold';
 }
 
 .signin-btn {
   padding: 10px 20px;
   font-size: 16px;
+  font-family: 'Roboto Bold';
 }
 
 .hero-content {
@@ -114,11 +121,13 @@
 .hero-content h1 {
   font-size: 50px;
   margin-bottom: 10px;
+  font-family: 'Roboto Bold';
 }
 
 .hero-content p {
   font-size: 15x;
   margin-bottom: 40px;
+  font-family: 'Roboto Bold';
 }
 
 .email-form {
@@ -142,6 +151,7 @@
   border-radius: 50px;
   cursor: pointer;
   font-size: 16px;
+  font-family: 'Roboto Bold';
 }
 
 .email-form button:hover {

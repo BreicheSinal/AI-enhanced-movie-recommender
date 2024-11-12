@@ -1,7 +1,8 @@
 <?php
 header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Methods: POS,GETT");
 header("Access-Control-Allow-Headers: Content-Type");
+header("Content-Type: application/json");
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -19,7 +20,6 @@ while ($row = $result->fetch_assoc()) {
     $movies[] = $row;
 }
 
-header('Content-Type: application/json');
 echo json_encode($movies);
 
 ?>   

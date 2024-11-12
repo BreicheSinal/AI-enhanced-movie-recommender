@@ -1,0 +1,92 @@
+@import url(font.css);
+
+footer{
+    height: auto;
+    background-color: #222426;
+    color: white;
+}
+
+.footer-logo-container{
+    padding-top: 30px;
+    padding-left: 40px;
+    align-items: center;
+}
+
+.footer-logo-container > p{
+    font-family: 'Roboto Black';
+    font-size: 1.2rem;
+}
+
+footer > div:nth-child(2){
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 50px;
+    padding-inline: 0px;
+    height: auto;
+}
+
+.footer-subcontainer{
+    width: 15%;
+}
+
+.footer-subcontainer:nth-child(5), .footer-subcontainer:nth-child(3){
+    width: 10%;
+}
+
+.footer-subcontainer > h2{
+    font-size: 0.99rem;
+    color: #cc00aa;
+    margin-bottom: 20px;
+    font-family: 'Roboto Black';
+}
+
+.footer-links{
+    gap: 10px;
+}
+
+.footer-links a{
+    font-family: 'Roboto Thin';
+    cursor: pointer;
+}
+
+.footer-social-media{
+    padding-block: 40px;
+}
+
+.footer-social-media > div:nth-child(1){
+    gap: 15px;
+}
+
+.footer-social-media > div:nth-child(1) > svg{
+    cursor: pointer;
+}
+
+.footer-social-media > p{
+    font-family: 'Roboto Thin';
+    font-size: 0.6rem;
+    padding-top: 5px;
+}
+
+.footer-social-media svg {
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-social-media svg:hover {
+    transform: translateY(-5px); 
+}
+
+@media (max-width: 850px) {
+    .footer-subcontainer:nth-child(n+3){
+        display: none;
+    }
+    footer > div:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        justify-self: center;
+    }
+    .footer-subcontainer:nth-child(1), .footer-subcontainer:nth-child(2){
+        width: 100%;
+        padding-top: 20px;
+    }
+  }

@@ -1,11 +1,12 @@
 <?php 
-session_start();
-
 ini_set('session.gc_maxlifetime', 86400);  // 1 day in seconds
 ini_set('session.cookie_lifetime', 86400);  // Also 1 day
 
+session_start();
 
-header("Access-Control-Allow-Origin: http://127.0.0.1:5500");  
+
+
+header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Allow-Credentials: true");
@@ -26,7 +27,10 @@ if (empty($username) || empty($pass)) {
     exit;
 }
 
-$checkUserSql = "SELECT id, pass, username FROM users WHERE username = ?";
+$checkUserSql = "SELECT users.id, users.pass, users.username, user_type.user_type 
+                 FROM users 
+                 JOIN user_type ON users.user_type_id = user_type.user_type_id 
+                 WHERE username = ?";
 $query = $conn->prepare($checkUserSql);
 $query->bind_param("s", $username);
 $query->execute();
@@ -42,11 +46,14 @@ if ($result->num_rows === 0) {
         // Storing user data in session 
         $_SESSION['id'] = $user['id'];
         $_SESSION['username'] = $user['username'];
+        $_SESSION['user_type'] = $user['user_type'];
 
         error_log("Session ID in login.php: " . session_id());
 error_log("Session data in login.php: " . print_r($_SESSION, true));
         
-        echo json_encode(['success' => true, 'id' => $user['id']]);
+        echo json_encode(['success' => true, 'id' => $user['id'], 'user_type' => $user['user_type']]);
+
+    
     } else {
         echo json_encode(['success' => false, 'error' => 'Invalid username or password']);
     }
