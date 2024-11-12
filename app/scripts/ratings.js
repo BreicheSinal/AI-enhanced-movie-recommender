@@ -15,7 +15,11 @@ function addRating(rateValue,movie){
     )
     .then(response=>response.json())
     .then(data => {
-        console.log(data);  
+        if(data.success){
+            const star = document.getElementById(`star-${movie.id}-${rateValue}`);
+            console.log(star);
+            
+        } 
     })
     .catch(error => console.log('Error: ', error)); 
 }
