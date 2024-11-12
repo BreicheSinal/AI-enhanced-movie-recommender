@@ -25,14 +25,19 @@ if (isset($data['movie_id']) && isset($data['user_id']) && isset($data['rate_val
 
     if($check_query->num_rows>0){
         //user already rated the movie
-        echo json_encode(['success'=>false,'message'=>'Movie is already rated']);
+        $check_rating= $conn->prepare('SELECT rate_value FROM rating WHERE user_id=? AND movie_id=?');
+        $check_rating->bind_param('ii',$user_id, $movie_id);
+
+        $check_rating->execute();
+
+        echo json_encode(['success'=>false,'message'=>'Movie is already rated', 'rateValue'=>'SELECT ']);
     }else{
         //user didn't rate the movie yet, so insert
         $query = 'INSERT INTO rating (user_id, movie_id, rate_value) VALUES (?,?,?)';
         $add_query = $conn->prepare($query); 
         $add_query->bind_param('iii',$user_id, $movie_id, $rate_value);
         if($add_query->execute()){
-            echo json_encode(['success'=>true, 'message'=>'Rating Added']);
+            echo json_encode(['success'=>true, 'message'=>'Rating Added', 'rate_value'=>$rate_value]);
         }else{
             echo json_encode(['success'=>false, 'message'=>'Failed to Add Rating']);
         }
