@@ -24,7 +24,7 @@ async function submitLogin() {
     const password = document.getElementById("password").value;
     const messageDiv = document.getElementById("message");
 
-    // resit mesg
+    // to reset message
     messageDiv.textContent = "";
 
     try {
@@ -41,10 +41,12 @@ async function submitLogin() {
 
         const result = await response.json();
         if (result.success) {
+
+            console.log(result);
             localStorage.setItem("user_id", result.id);
             localStorage.setItem("user_type", result.user_type);
             
-            window.location.href = `http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/main.html?id=${result.id}`;
+            window.location.href = `http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/index.html?id=${result.id}`;
             messageDiv.className = "success-message";
             messageDiv.textContent = "User logged successfully!";
         } else {
@@ -57,5 +59,3 @@ async function submitLogin() {
         messageDiv.textContent = "An error occurred. Please try again.";
     }
 }
-
-document.getElementById("loginButton").addEventListener("click", submitLogin);
