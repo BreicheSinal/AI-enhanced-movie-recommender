@@ -42,7 +42,7 @@ function checkRatingStatus(movie){
             console.log('the rate value is: ',data.rateValue);
             setRating(movie, data.rateValue);
         }else{
-            console.log(`movie ${data.movie_id} not rated yet`)
+            console.log(`movie not rated yet`)
         }
     })
     .catch(error => console.log(error));

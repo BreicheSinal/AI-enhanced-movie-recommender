@@ -47,6 +47,7 @@ fetch('http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-rec
             
             checkBookmarkStatus(bookmark,movie);
             checkRatingStatus(movie);
+            calculateRating(movie);
 
             bookmark.addEventListener('click',()=>toggleBookmark(bookmark, movie));
 
