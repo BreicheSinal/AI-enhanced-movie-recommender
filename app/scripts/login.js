@@ -1,3 +1,24 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const signInButton = document.getElementById("signin-btn");
+    const logoutButton = document.getElementById("logoutButton");
+
+    if (localStorage.getItem("user_id")) {
+        signInButton.style.display = "none";
+        logoutButton.style.display = "block";
+    }
+
+    logoutButton.addEventListener("click", function() {
+        localStorage.removeItem("user_id");
+        localStorage.removeItem("user_type");
+
+        signInButton.style.display = "block";
+        logoutButton.style.display = "none";
+
+        window.location.href = "http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/login.html"; 
+    });
+});
+
+
 async function submitLogin() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
@@ -25,8 +46,7 @@ async function submitLogin() {
             localStorage.setItem("user_id", result.id);
             localStorage.setItem("user_type", result.user_type);
             
-            // Redirect to the next page with id as a URL parameter
-            window.location.href = `http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/main.html?id=${result.id}`;
+            window.location.href = `http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/index.html?id=${result.id}`;
             messageDiv.className = "success-message";
             messageDiv.textContent = "User logged successfully!";
         } else {
