@@ -9,7 +9,7 @@ $data = json_decode(file_get_contents("php://input"), true);
 if (isset($data) && !empty($data)) {
     // Prepare the SQL query with placeholders
     $query = $conn->prepare("INSERT INTO movies (title, description, release_year, genre, duration, image_url) VALUES (?, ?, ?, ?, ?, ?)");
-    $query->bind_param("ssisds", $title, $description, $releaseYear, $genre, $duration, $imageUrl);
+    $query->bind_param("ssisss", $title, $description, $releaseYear, $genre, $duration, $imageUrl);
 
     // Loop through each movie data and insert into the database
     foreach ($data as $movie) {
