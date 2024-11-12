@@ -30,7 +30,7 @@ function addRating(rateValue,movie){
     .catch(error => console.log('Error: ', error)); 
 }
 
-function checkRatingStatus(rateValue,movie){
+function checkRatingStatus(movie){
     fetch('http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/server/check_rating.php',{
         method:'POST',
         headers:{
@@ -40,7 +40,6 @@ function checkRatingStatus(rateValue,movie){
         body:JSON.stringify({
             user_id: user_id,
             movie_id: movie.id,
-            rate_value: rateValue,
         })
     })
     .then(response => response.json())
@@ -48,6 +47,7 @@ function checkRatingStatus(rateValue,movie){
         if(data.rateValue){
             console.log('the rate value is: ',data.rateValue);
         }else{
+            console.log(`movie ${data.movie_id} not rated yet`)
         }
     })
     .catch(error => console.log(error));

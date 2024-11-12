@@ -46,6 +46,7 @@ fetch('http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-rec
             moviesContainer.appendChild(movieElement);
             
             checkBookmarkStatus(bookmark,movie);
+            checkRatingStatus(movie);
 
             bookmark.addEventListener('click',()=>toggleBookmark(bookmark, movie));
 
@@ -53,15 +54,7 @@ fetch('http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-rec
                 //the star id is passed as e.g. star-1-5, so just get the last number which is the rate value
                 const rateValue = event.target.parentElement.id.split('-').pop();
 
-                // for (let i = 1; i <= rateValue; i++) {
-                //     const star = document.getElementById(`event.target.parentElement.id`);
-                //     if (i <= starNumber) {
-                //         star.querySelector('svg').classList.add('star-filled'); // Add filled class
-                //     }
-                // }
-
                 addRating(rateValue,movie);
-                checkRatingStatus(rateValue,movie);
             });
         });
     });

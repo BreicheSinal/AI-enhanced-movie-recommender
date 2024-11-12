@@ -12,20 +12,21 @@ include 'connection.php';
 $data = json_decode(file_get_contents('php://input'), true);
 
 // Check if the required data is available in the JSON
-if (isset($data['user_id']) && isset($data['movie_id']) && isset($data['rate_value'])) {
+if (isset($data['user_id']) && isset($data['movie_id'])) {
     $user_id = $data['user_id'];
     $movie_id = $data['movie_id'];
-    $rate_value = $data['rate_value'];
 
     // Check if the movie is bookmarked
-    $query = "SELECT * FROM rating WHERE user_id = ? AND movie_id = ? AND rate_value= ?";
+    $query = "SELECT rate_value FROM rating WHERE user_id = ? AND movie_id = ?";
     $stmt = $conn->prepare($query);
-    $stmt->bind_param('iii', $user_id, $movie_id, $rate_value);
+    $stmt->bind_param('ii', $user_id, $movie_id);
     $stmt->execute();
     $result = $stmt->get_result();
 
     // Return whether the movie is bookmarked or not
     if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $rate_value = $row['rate_value']; //retrieve the rate value from the row
         echo json_encode([ 'success'=>true ,'rateValue' => $rate_value]);
     } else {
         echo json_encode(['success' => false, 'message'=>'Movie not rated yet']);
