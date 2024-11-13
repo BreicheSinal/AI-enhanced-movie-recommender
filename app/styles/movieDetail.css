@@ -151,8 +151,16 @@
     margin-bottom: 8px;
   }
 
-  .movie-details div{
-    display: flex;  
+  .movies-container > div{
+    display: flex; 
+    gap: 100px; 
+    width: 100%;
+  }
+
+  .bookmarkStarsDiv{
+    position: absolute;
+    top: 66%;
+    left: 26%;
   }
 
   @media (max-width: 850px) {
