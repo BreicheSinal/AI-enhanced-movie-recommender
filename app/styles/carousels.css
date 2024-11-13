@@ -1,80 +1,69 @@
+.popular-now, .coming-soon, .drama-movies{
+  height: auto;
+  width: 100%;
+  text-align: center;
+  background-color: #131415;
+  padding-bottom: 40px;
+}
+
+.popular-now>h2, .coming-soon>h2, .drama-movies>h2{
+  color: #CC00AA;
+  padding-top: 30px;
+}
 
 
-.popular-now {
-    height: auto;
-    width: 100%;
-    text-align: center;
-    background-color: #131415;
-  }
+.carousel-container, .carousel-container2, .carousel-container3 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 30px;
+  padding-left: 30px;
+}
 
-  .popular-now>h2{
-    color: #CC00AA;
-    padding-top: 30px;
-  }
+.carousel, .carousel2, .carousel3 {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease-in-out;
+}
 
+.movie-card{
+  width: 200px;
+  background-color: #cc00aa;
+  border-radius: 0px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  color: #ffffff77;
   
-  .carousel-container {
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    padding-top: 30px;
-    padding-left: 30px;
-  }
-  
-  .carousel {
-    display: flex;
-    gap: 20px;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .carousel .movie-card {
-    width: 200px;
-    background-color: rgba(106, 28, 145, 0.57);
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    position: relative;
-    color: #ffffff77;
-    
-  }
-  
-  .carousel .movie-card img {
-    width: 100%;
-    height: 309px;
-    object-fit: cover;
-  }
+}
 
-  
-  .carousel .movie-card .details {
-    padding: 10px;
-    color: #FFFFFF;
-  }
-  
-  .carousel .movie-card .details h3 {
-    margin: 0;
-    font-size: 16px;
-    color: #FFFFFF;
-  }
-  
-  .carousel .movie-card .details p {
-    font-size: 14px;
-    color: #FFFFFF;
-  }
-  
-  /* button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-  } */
-  
+.movie-card img{
+  width: 100%;
+  height: 309px;
+  object-fit: cover;
+}
+
+
+.movie-card .details {
+  padding: 10px;
+  color: #FFFFFF;
+}
+
+.movie-card .details h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.movie-card .details p{
+  font-size: 14px;
+  color: #FFFFFF;
+}
   
 
-  .carousel-container .prev-btn .next-btn{
-    background-color: rgba(0, 0, 0, 0.5);
+.prev-btn .next-btn{
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 10px;
   border: none;
@@ -86,121 +75,9 @@
   z-index: 10;
   transition: background-color 0.2s ease;
 
-  }
-
-  .prev-btn {
-    padding: 4px;
-    height: 60px;
-    margin-right: 10px;
-    box-shadow: #131415;
-    border-radius: 20px;
-    background-color: #4F4A4A;
-    left: -5px; 
-  }
-  
-  .next-btn {
-    padding: 4px;
-    height: 60px;
-    margin-left: 10px;
-    border-radius: 20px;
-    background-color: #4F4A4A;
-    right: -10px; 
-  }
-
-  .next-btn:hover {
-    background-color: rgba(106, 28, 145, 0.8);
-  }
-  
-  .prev-btn:hover {
-    background-color: rgba(106, 28, 145, 0.8);
-  }
-  
-
-
-
-.coming-soon{
-  height: auto;
-  width: 100%;
-  text-align: center;
-  background-color: #131415;
-  padding-bottom: 40px;
 }
 
-.coming-soon>h2{
-  color: #CC00AA;
-  padding-top: 30px;
-}
-
-
-.carousel-container2 {
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  padding-top: 30px;
-  padding-left: 30px;
-}
-
-.carousel2 {
-  display: flex;
-  gap: 20px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.carousel2 .movie-card {
-  width: 200px;
-  background-color: rgba(106, 28, 145, 0.57);
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  position: relative;
-  color: #ffffff77;
-  
-}
-
-.carousel2 .movie-card img {
-  width: 100%;
-  height: 309px;
-  object-fit: cover;
-}
-
-
-
-.carousel2 .movie-card .details {
-  padding: 10px;
-  color: #FFFFFF;
-}
-
-.carousel2 .movie-card .details h3 {
-  margin: 0;
-  font-size: 16px;
-  color: #FFFFFF;
-}
-
-.carousel2 .movie-card .details p {
-  font-size: 14px;
-  color: #FFFFFF;
-}
-
-
-
-.carousel-container2 .prev-btn .next-btn{
-  background-color: rgba(0, 0, 0, 0.5);
-color: white;
-padding: 10px;
-border: none;
-font-size: 20px;
-cursor: pointer;
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-z-index: 10;
-transition: background-color 0.2s ease;
-
-}
-
-
-.prev-btn2 {
+.prev-btn, .prev-btn2, .prev-btn3 {
   padding: 4px;
   height: 60px;
   margin-right: 10px;
@@ -210,7 +87,7 @@ transition: background-color 0.2s ease;
   left: -5px; 
 }
 
-.next-btn2 {
+.next-btn, .next-btn2, .next-btn3 {
   padding: 4px;
   height: 60px;
   margin-left: 10px;
@@ -219,11 +96,6 @@ transition: background-color 0.2s ease;
   right: -10px; 
 }
 
-.next-btn2:hover {
+.next-btn:hover, .next-btn2:hover, .next-btn3, .prev-btn:hover, .prev-btn2:hover, .prev-btn3:hover {
   background-color: rgba(106, 28, 145, 0.8);
 }
-
-.prev-btn2:hover {
-  background-color: rgba(106, 28, 145, 0.8);
-}
-

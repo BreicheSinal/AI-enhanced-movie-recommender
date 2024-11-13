@@ -1,8 +1,11 @@
 const carouselContainer = document.querySelector('.carousel');
 const carouselContainer2 = document.querySelector('.carousel2');
+const carouselContainer3 = document.querySelector('.carousel3');
+const carouselContainer4 = document.querySelector('.carousel4');
+const carouselContainer5 = document.querySelector('.carousel5');
+const carouselContainer6 = document.querySelector('.carousel6');
 
 function renderMovies(movies) {
-    //carouselContainer.innerHTML = ''; // Clear existing cards
     movies = movies.slice(0,15);
     movies.forEach(movie => {
         const movieCard = document.createElement('div');
@@ -63,8 +66,6 @@ function rotateCarousel() {
 }
 }
 
-
-
 function renderNewMovies(newMovies) {
 
     newMovies=newMovies.slice(23, 40);
@@ -119,6 +120,63 @@ function renderNewMovies(newMovies) {
             `;
             
             carouselContainer2.appendChild(movieCard);
+        });
+    }
+}
+
+function renderDramaMovies(movies) {
+
+    movies.forEach(movie => {
+        
+        if(movie.genre.toLowerCase().includes('drame') || movie.genre.toLowerCase().includes('dramatique')){
+            const movieCard = document.createElement('div');
+            movieCard.classList.add('movie-card');
+            
+            movieCard.innerHTML = `
+                <img src="${movie.image_url}" alt="${movie.title}">
+                <h3>${movie.title}</h3>
+                <p>${movie.genre} | ${movie.duration}</p>
+            `;
+            
+            carouselContainer3.appendChild(movieCard);
+        }
+    });
+
+
+    let currentIndex = 0;
+
+    document.querySelector('.next-btn3').addEventListener('click', () => {
+        currentIndex++;
+        if (currentIndex > movies.length - 1) {
+            currentIndex = 0;
+        }
+        rotateCarousel3();
+    });
+
+    document.querySelector('.prev-btn3').addEventListener('click', () => {
+        currentIndex--;
+        if (currentIndex < 0) {
+            currentIndex = movies.length - 1;
+        }
+        rotateCarousel3();
+    });
+
+    function rotateCarousel3() {
+        // Shift the array based on the current index
+        const rotatedMovies = [...movies.slice(currentIndex), ...movies.slice(0, currentIndex)];
+
+        carouselContainer3.innerHTML = '';
+        rotatedMovies.forEach(movie => {
+            const movieCard = document.createElement('div');
+            movieCard.classList.add('movie-card');
+
+            movieCard.innerHTML = `
+                <img src="${movie.image_url}" alt="${movie.title}">
+                <h3>${movie.title}</h3>
+                <p>${movie.genre} | ${movie.duration}</p>
+            `;
+            
+            carouselContainer3.appendChild(movieCard);
         });
     }
 }
