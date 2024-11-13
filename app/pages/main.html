@@ -4,18 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="./../styles/index.css">
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/font.css" />
+    <link rel="stylesheet" href="styles/colors.css" />
+    <link rel="stylesheet" href="styles/utilities.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/carousels.css"/>
+    <link rel="stylesheet" href="styles/reasons.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>FlickStream</title>
 </head>
 <body>
     <body>
-    <h1>Welcome to the Main Page</h1>
 
-    <div id="welcomeMessage">Loading...</div>
-    
     <div id="movies-container"></div>
 
     <button id="logoutButton">Logout</button>
 
+    <section name="reasonsToJoin" class="black-bg section4">
+        <h1 class="subtitle">More Reasons to Join</h1>
+        <div class="reasons-container">
+          <div class="reason-card relative-position">
+            Stories tailored to your taste
+            <img class="absolute-position reason-card-icon" src="./assets/images/hand-icon.png">
+          </div>
+          <div class="reason-card relative-position">
+            Cancel or switch plans
+            <img class="absolute-position reason-card-icon" src="./assets/images/handshake-icon.png">
+          </div>
+          <div class="reason-card relative-position">
+            A place just for kids
+            <img class="absolute-position reason-card-icon" src="./assets/images/heart-icon.png">
+          </div>
+          <div class="reason-card relative-position">
+            For your phone, tablet and TV
+            <img class="absolute-position reason-card-icon" src="./assets/images/devices-icon.png">
+          </div>
+        </div>
+      </section>
+  
+      <footer>
+        <div class="footer-logo-container flex flex-start full-width">
+          <img src="assets/images/logo.png">
+          <p>Endless<br>Stories,<br>One Stream</p>
+        </div>
+  
+        <div class="flex full-width align-center justify-center">
+          <div class="footer-subcontainer">
+            <h2>NEW MOVIES ON DISPLAY</h2>
+            <div class="footer-links flex column">
+              <a>Venom: The Last Dance</a>
+              <a>L'Amour ouf</a>
+              <a>JURE N°2</a>
+              <a>Monsieur Aznavour</a>
+              <a>Movies currently in cinemas</a>
+            </div>
+          </div>
+    
+          <div class="footer-subcontainer">
+            <h2>CINEMAS IN YOUR CITY</h2>
+            <div class="footer-links flex column">
+              <a>Cinemas in Paris</a>
+              <a>Cinemas in Lyon</a>
+              <a>Cinemas in Marseille</a>
+              <a>Cinemas in Toulouse</a>
+              <a>Cinemas in Nice</a>
+              <a>Cinemas in around me</a>
+            </div>
+          </div>
+    
+          <div class="footer-subcontainer">
+            <h2>ABOUT</h2>
+            <div class="footer-links flex column">
+              <a>CinePass</a>
+              <a>CineCartes</a>
+              <a>IMAX</a>
+              <a>Dolby Cinemas</a>
+              <a>4DX</a>
+            </div>
+          </div>
+    
+          <div class="footer-subcontainer">
+            <h2>USEFUL LINKS</h2>
+            <div class="footer-links flex column">
+              <a>Business offers</a>
+              <a>Pathe</a>
+              <a>Pathe Home</a>
+              <a>Pathe Live</a>
+              <a>Privacy Policy</a>
+              <a>Legal notice</a>
+              <a>Help center</a>
+            </div>
+          </div>
+    
+          <div class="footer-subcontainer">
+            <h2>FAQs</h2>
+            <div class="footer-links flex column">
+              <a>Help center</a>
+              <a>FAQs</a>
+              <a>About Cinepass</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="flex column full-width justify-center align-center footer-social-media">
+          <div class="flex">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <p>Flick Stream Services © 2024 All Rights Reserved</p>
+        </div>
+  
+      </footer>
+      <script src="scripts/index.js"></script>
+      <!-- <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/bookmark.js"></script> -->
+      <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/login.js"></script>
+    <script src="scripts/carousel.js"></script>
     <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/main.js"></script> 
     <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/get_movies.js"></script>
     <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/bookmark.js"></script>

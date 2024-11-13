@@ -17,7 +17,6 @@ function addRating(rateValue,movie){
     .then(data => {
         if(data.success){
             const star = document.getElementById(`star-${movie.id}-${rateValue}`);
-            console.log(star);
             setRating(movie, rateValue);
         } 
     })
@@ -39,10 +38,7 @@ function checkRatingStatus(movie){
     .then(response => response.json())
     .then(data=>{
         if(data.rateValue){
-            console.log('the rate value is: ',data.rateValue);
             setRating(movie, data.rateValue);
-        }else{
-            console.log(`movie not rated yet`)
         }
     })
     .catch(error => console.log(error));
