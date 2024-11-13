@@ -126,12 +126,25 @@ function renderNewMovies(newMovies) {
 
 function renderDramaMovies(movies) {
 
-    movies.forEach(movie => {
-        
-        if(movie.genre.toLowerCase().includes('drame') || movie.genre.toLowerCase().includes('dramatique')){
+    const dramaMovies = movies.filter(movie =>
+        movie.genre.toLowerCase().includes('drame') || 
+        movie.genre.toLowerCase().includes('dramatique')
+    );
+
+    let currentIndex = 0;
+
+    function rotateCarousel3() {
+        const rotatedMovies = [
+            ...dramaMovies.slice(currentIndex),
+            ...dramaMovies.slice(0, currentIndex)
+        ];
+
+        carouselContainer3.innerHTML = '';
+
+        rotatedMovies.forEach(movie => {
             const movieCard = document.createElement('div');
             movieCard.classList.add('movie-card');
-            
+
             movieCard.innerHTML = `
                 <img src="${movie.image_url}" alt="${movie.title}">
                 <h3>${movie.title}</h3>
@@ -139,15 +152,12 @@ function renderDramaMovies(movies) {
             `;
             
             carouselContainer3.appendChild(movieCard);
-        }
-    });
-
-
-    let currentIndex = 0;
+        });
+    }
 
     document.querySelector('.next-btn3').addEventListener('click', () => {
         currentIndex++;
-        if (currentIndex > movies.length - 1) {
+        if (currentIndex > dramaMovies.length - 1) {
             currentIndex = 0;
         }
         rotateCarousel3();
@@ -156,16 +166,30 @@ function renderDramaMovies(movies) {
     document.querySelector('.prev-btn3').addEventListener('click', () => {
         currentIndex--;
         if (currentIndex < 0) {
-            currentIndex = movies.length - 1;
+            currentIndex = dramaMovies.length - 1;
         }
         rotateCarousel3();
     });
 
-    function rotateCarousel3() {
-        // Shift the array based on the current index
-        const rotatedMovies = [...movies.slice(currentIndex), ...movies.slice(0, currentIndex)];
+    rotateCarousel3();
+}
 
-        carouselContainer3.innerHTML = '';
+function renderComedyMovies(movies) {
+
+    const comedyMovies = movies.filter(movie => 
+        movie.genre.toLowerCase().includes('comédie')
+    );
+
+    let currentIndex = 0;
+
+    function rotateCarousel4() {
+        const rotatedMovies = [
+            ...comedyMovies.slice(currentIndex),
+            ...comedyMovies.slice(0, currentIndex)
+        ];
+
+        carouselContainer4.innerHTML = '';
+
         rotatedMovies.forEach(movie => {
             const movieCard = document.createElement('div');
             movieCard.classList.add('movie-card');
@@ -176,36 +200,13 @@ function renderDramaMovies(movies) {
                 <p>${movie.genre} | ${movie.duration}</p>
             `;
             
-            carouselContainer3.appendChild(movieCard);
+            carouselContainer4.appendChild(movieCard);
         });
     }
-}
-
-function renderComedyMovies(movies) {
-
-    movies.forEach(movie => {
-        
-        if(movie.genre.toLowerCase().includes('comédie')){
-            console.log(movie.genre);
-            const movieCard = document.createElement('div');
-            movieCard.classList.add('movie-card');
-            
-            movieCard.innerHTML = `
-                <img src="${movie.image_url}" alt="${movie.title}">
-                <h3>${movie.title}</h3>
-                <p>${movie.genre} | ${movie.duration}</p>
-            `;
-            
-            carouselContainer4.appendChild(movieCard);
-        }
-    });
-
-
-    let currentIndex = 0;
 
     document.querySelector('.next-btn4').addEventListener('click', () => {
         currentIndex++;
-        if (currentIndex > movies.length - 1) {
+        if (currentIndex > comedyMovies.length - 1) {
             currentIndex = 0;
         }
         rotateCarousel4();
@@ -214,16 +215,30 @@ function renderComedyMovies(movies) {
     document.querySelector('.prev-btn4').addEventListener('click', () => {
         currentIndex--;
         if (currentIndex < 0) {
-            currentIndex = movies.length - 1;
+            currentIndex = comedyMovies.length - 1;
         }
         rotateCarousel4();
     });
 
-    function rotateCarousel4() {
-        // Shift the array based on the current index
-        const rotatedMovies = [...movies.slice(currentIndex), ...movies.slice(0, currentIndex)];
+    rotateCarousel4();
+}
 
-        carouselContainer4.innerHTML = '';
+function renderAnimationMovies(movies) {
+
+    const animationMovies = movies.filter(movie => 
+        movie.genre.toLowerCase().includes('animation')
+    );
+
+    let currentIndex = 0;
+
+    function rotateCarousel5() {
+        const rotatedMovies = [
+            ...animationMovies.slice(currentIndex),
+            ...animationMovies.slice(0, currentIndex)
+        ];
+
+        carouselContainer5.innerHTML = '';
+
         rotatedMovies.forEach(movie => {
             const movieCard = document.createElement('div');
             movieCard.classList.add('movie-card');
@@ -234,35 +249,13 @@ function renderComedyMovies(movies) {
                 <p>${movie.genre} | ${movie.duration}</p>
             `;
             
-            carouselContainer4.appendChild(movieCard);
+            carouselContainer5.appendChild(movieCard);
         });
     }
-}
-
-function renderAnimationMovies(movies) {
-
-    movies.forEach(movie => {
-        
-        if(movie.genre.toLowerCase().includes('animation')){
-            const movieCard = document.createElement('div');
-            movieCard.classList.add('movie-card');
-            
-            movieCard.innerHTML = `
-                <img src="${movie.image_url}" alt="${movie.title}">
-                <h3>${movie.title}</h3>
-                <p>${movie.genre} | ${movie.duration}</p>
-            `;
-            
-            carouselContainer5.appendChild(movieCard);
-        }
-    });
-
-
-    let currentIndex = 0;
 
     document.querySelector('.next-btn5').addEventListener('click', () => {
         currentIndex++;
-        if (currentIndex > movies.length - 1) {
+        if (currentIndex > animationMovies.length - 1) {
             currentIndex = 0;
         }
         rotateCarousel5();
@@ -271,29 +264,12 @@ function renderAnimationMovies(movies) {
     document.querySelector('.prev-btn5').addEventListener('click', () => {
         currentIndex--;
         if (currentIndex < 0) {
-            currentIndex = movies.length - 1;
+            currentIndex = animationMovies.length - 1;
         }
         rotateCarousel5();
     });
 
-    function rotateCarousel5() {
-        // Shift the array based on the current index
-        const rotatedMovies = [...movies.slice(currentIndex), ...movies.slice(0, currentIndex)];
-
-        carouselContainer5.innerHTML = '';
-        rotatedMovies.forEach(movie => {
-            const movieCard = document.createElement('div');
-            movieCard.classList.add('movie-card');
-
-            movieCard.innerHTML = `
-                <img src="${movie.image_url}" alt="${movie.title}">
-                <h3>${movie.title}</h3>
-                <p>${movie.genre} | ${movie.duration}</p>
-            `;
-            
-            carouselContainer5.appendChild(movieCard);
-        });
-    }
+    rotateCarousel5();
 }
 
 function renderAllMovies(movies) {
