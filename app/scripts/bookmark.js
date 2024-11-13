@@ -54,7 +54,6 @@ function addBookmark(bookmark, movie){
     .then(response => response.json())
     .then(data => {
         if(data.success){
-            console.log('Movie bookmarked');
             setBookmarked(bookmark);
         }else{
             console.log('Failed to bookmark', data.message);
@@ -81,7 +80,6 @@ function removeBookmark(bookmark, movie){
     .then(response => response.json())
     .then(data => {
         if(data.success){
-            console.log('Movie removed from bookmarks');
             setNotBookmarked(bookmark);
         }else{
             console.log('Failed to bookmark', data.message);

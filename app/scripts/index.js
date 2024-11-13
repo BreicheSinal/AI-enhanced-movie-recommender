@@ -15,7 +15,6 @@ botBttn.addEventListener("click", function () {
 const apiURL = "https://api.openai.com/v1/chat/completions";
 const apiKey =
   "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";
-//const apiKey = "";
 
 sigIN.addEventListener("click", function () {
   window.location.href =
@@ -24,20 +23,16 @@ sigIN.addEventListener("click", function () {
 
 let msgHistory = [];
 
-//  adding event handler "onclick"
 sendBtn.onclick = async function () {
-  //console.log(here);
   if (messageBar.value.trim().length > 0) {
-    const userMessage = messageBar.value.trim(); // trim(): removing spaces
-    messageBar.value = ""; // clearing input field
+    const userMessage = messageBar.value.trim(); 
+    messageBar.value = ""; 
 
     addUserMessage(userMessage);
     addChatbotPlaceholder();
 
-    // adding user msg to msghistory
     msgHistory.push({ role: "user", content: userMessage });
 
-    // trim the history to the last 5 messages (managing token limit)
     msgHistory = msgHistory.slice(-5);
 
     //passing user msg to get bot response
