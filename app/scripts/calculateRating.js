@@ -14,10 +14,8 @@ function calculateRating(movie){
     .then(response=>response.json())
     .then(data => {
         if (data.success) {
-            console.log('Rating for movie',data.movie,' is ',data.averageRating, '/5');
             return data.averageRating;
         } else {
-            console.error("Failed to calculate rating:", data.message);
             return 0;
         }
     })

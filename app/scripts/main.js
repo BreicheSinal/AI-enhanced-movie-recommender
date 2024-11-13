@@ -17,7 +17,7 @@ window.onload = async function() {
         alert('An error occurred. Please log in again.');
         window.location.href = 'http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/login.html';
     }
-};
+});
 
 
 document.getElementById("logoutButton").addEventListener("click", function() {
