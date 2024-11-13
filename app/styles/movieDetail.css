@@ -151,6 +151,18 @@
     margin-bottom: 8px;
   }
 
+  .movies-container > div{
+    display: flex; 
+    gap: 100px; 
+    width: 100%;
+  }
+
+  .bookmarkStarsDiv{
+    position: absolute;
+    top: 66%;
+    left: 26%;
+  }
+
   @media (max-width: 850px) {
     .movie-details {
       display: flex;
@@ -165,6 +177,29 @@
       border-radius: 8px;
     }
 
+    .hero-section2 {
+      height: auto;
+      background: url("../assets/images/IMG-HREO\ SECTION.png") center center /
+        cover no-repeat;
+      background-color: black;
+      overflow-y: scroll;
+    }
+  }
+
+  @media (max-width: 850px) {
+    .movies-container >div {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+
+    .movie-details img {
+      width: 70%;
+      align-self: center;
+      height: auto;
+      border-radius: 8px;
+    }
+    
     .hero-section2 {
       height: auto;
       background: url("../assets/images/IMG-HREO\ SECTION.png") center center /
