@@ -17,3 +17,7 @@ button {
   padding: 25px;
   font-size: 2rem;
 }
+
+a {
+  text-decoration: none;
+}

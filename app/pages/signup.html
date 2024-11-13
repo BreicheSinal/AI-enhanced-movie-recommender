@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/styles/signup.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link
+      rel="stylesheet"
+      href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/styles/signup.css"
+    />
     <!-- <title>Document</title> -->
-</head>
-<body >
-
+  </head>
+  <body class="bg">
     <div class="signup-form">
-        <h2>Signup</h2>
-        <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" id="username" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" required>
-        </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" id="password" required>
-        </div>
-        <div class="form-group">
-            <button onclick="submitSignup()">Sign Up</button>
-        </div>
-        <div id="message" class="error-message"></div>
-        <a href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/login.html">login?</a>
-   
-        <div class="home1">
-            <a  href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/index.html">Home</a>
-        </div>
+      <h2 class="primary-color">SIGN UP</h2>
+      <div class="form-group">
+        <label for="username">USERNAME</label>
+        <input type="text" id="username" required />
+      </div>
+      <div class="form-group">
+        <label for="email">EMAIL</label>
+        <input type="email" id="email" required />
+      </div>
+      <div class="form-group">
+        <label for="password">PASSWORD</label>
+        <input type="password" id="password" required />
+      </div>
+      <div class="form-group">
+        <button onclick="submitSignup()">Sign Up</button>
+      </div>
+      <div id="message" class="error-message"></div>
+      <a
+        href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/login.html"
+        >LOGIN</a
+      >
+
+      <div class="home1">
+        <a
+          href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/index.html"
+          >HOME</a
+        >
+      </div>
     </div>
-    
 
     <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/signup.js"></script>
     <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/movieDetail.js"></script>
-</body>
+  </body>
 </html>
