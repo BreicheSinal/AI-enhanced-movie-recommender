@@ -151,6 +151,10 @@
     margin-bottom: 8px;
   }
 
+  .movie-details div{
+    display: flex;  
+  }
+
   @media (max-width: 850px) {
     .movie-details {
       display: flex;

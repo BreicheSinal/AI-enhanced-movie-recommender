@@ -6,6 +6,8 @@ const carouselContainer5 = document.querySelector('.carousel5');
 const carouselContainer6 = document.querySelector('.carousel6');
 
 function renderMovies(movies) {
+    console.log('in render');
+    
     movies = movies.slice(0,15);
     movies.forEach(movie => {
         const movieCard = document.createElement('div');
