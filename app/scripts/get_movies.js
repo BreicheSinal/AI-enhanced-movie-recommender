@@ -9,12 +9,14 @@ fetch('http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-rec
 
         const moviesContainer = document.getElementById("movies-container");
 
-        renderMovies(movies);
-        renderNewMovies(movies);
-        renderDramaMovies(movies);
-        renderComedyMovies(movies);
-        renderAnimationMovies(movies);
-        renderAllMovies(movies);
+        if(!window.location.href == 'http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/details.html'){
+            renderMovies(movies);
+            renderNewMovies(movies);
+            renderDramaMovies(movies);
+            renderComedyMovies(movies);
+            renderAnimationMovies(movies);
+            renderAllMovies(movies);
+        }
 
         movies.forEach(movie => {
             const movieElement = document.createElement('div');
