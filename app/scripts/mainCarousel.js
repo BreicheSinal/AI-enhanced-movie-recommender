@@ -22,7 +22,7 @@ function renderMovies(movies) {
             };
 
             movieCard.addEventListener('click', () => {
-                console.log('clickeddd');
+                showDetails(movie);
             });
         
         carouselContainer.appendChild(movieCard);
@@ -64,7 +64,7 @@ function rotateCarousel() {
         `;
         
         movieCard.addEventListener('click', () => {
-            console.log('clickeddd');
+            showDetails(movie);
         });
 
         carouselContainer.appendChild(movieCard);
@@ -89,7 +89,7 @@ function renderNewMovies(movies) {
         `;
 
         movieCard2.addEventListener('click', () => {
-            console.log('clickeddd');
+            showDetails(movie2);
         });
         
         carouselContainer2.appendChild(movieCard2);
@@ -130,7 +130,7 @@ function renderNewMovies(movies) {
             `;
 
             movieCard.addEventListener('click', () => {
-                console.log('clickeddd');
+                showDetails(movie);
             });
             
             carouselContainer2.appendChild(movieCard);
@@ -166,7 +166,7 @@ function renderDramaMovies(movies) {
             `;
             
             movieCard.addEventListener('click', () => {
-                console.log('clickeddd');
+                showDetails(movie);
             });
 
             carouselContainer3.appendChild(movieCard);
@@ -219,7 +219,7 @@ function renderComedyMovies(movies) {
             `;
             
             movieCard.addEventListener('click', () => {
-                console.log('clickeddd');
+                showDetails(movie);
             });
 
             carouselContainer4.appendChild(movieCard);
@@ -272,7 +272,7 @@ function renderAnimationMovies(movies) {
             `;
             
             movieCard.addEventListener('click', () => {
-                console.log('clickeddd');
+                showDetails(movie);
             });
 
             carouselContainer5.appendChild(movieCard);
@@ -311,7 +311,7 @@ function renderAllMovies(movies) {
         `;
 
         movieCard.addEventListener('click', () => {
-            console.log('clickeddd');
+            showDetails(movie);
         });
         
         carouselContainer6.appendChild(movieCard);
@@ -352,7 +352,7 @@ function renderAllMovies(movies) {
             `;
 
             movieCard.addEventListener('click', () => {
-                console.log('clickeddd');
+                showDetails(movie);
             });
             
             carouselContainer6.appendChild(movieCard);
