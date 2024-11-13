@@ -5,13 +5,16 @@ fetch('http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-rec
     .then(movies => {
         console.log('Fetched Movies:', movies);
 
-
         moviesArray = movies;
 
-        // Log the movies array to the console
-        console.log(moviesArray)
-
         const moviesContainer = document.getElementById("movies-container");
+
+        renderMovies(movies);
+        renderNewMovies(movies);
+        renderDramaMovies(movies);
+        renderComedyMovies(movies);
+        renderAnimationMovies(movies);
+        renderAllMovies(movies);
 
         movies.forEach(movie => {
             const movieElement = document.createElement('div');
@@ -21,6 +24,7 @@ fetch('http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-rec
 
             movieElement.innerHTML=`
             <p>${movie.title}</p>
+            <img src=${movie.image_url}>
             <p>${movie.description}</p>
             <p>${movie.release_year}</p>
             <p>${movie.genre}</p>
@@ -49,9 +53,8 @@ fetch('http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-rec
             checkBookmarkStatus(bookmark,movie);
             checkRatingStatus(movie);
             calculateRating(movie).then(averageRating=>{
-                console.log('Hehe',averageRating);
                 const ratingSpan = document.createElement('span');
-                ratingSpan.innerText = `Rating: ${averageRating}`;
+                ratingSpan.innerText = `Rating: ${averageRating}/5`;
                 movieElement.appendChild(ratingSpan);
             });
 
