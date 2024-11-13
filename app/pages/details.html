@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlickStream</title>
+    <link rel="stylesheet" href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/styles/base.css" />
+    <link rel="stylesheet" href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/styles/font.css" />
+    <link rel="stylesheet" href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/styles/colors.css" />
+    <link rel="stylesheet" href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/styles/utilities.css" />
+    <link rel="stylesheet" href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/styles/index.css" />
+    <link rel="stylesheet" href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/styles/movieDetail.css" />
+</head>
+<body>
+
+    <section name="navHero2">
+        <div
+          class="hero-section2 overflow-hidden relative-position text-center black-bg full-width"
+        >
+          <div class="header flex space-between align-center">
+            <div class="flex row justify-center align-center">
+              <img src="assets/images/logo.png" alt="" />
+              <h1 class="off-white">FlickStream</h1>
+            </div>
+            <button id="signin-btn" onclick="window.location.href='http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/login.html'" class="signin-btn no-border primary-bg-color off-white">
+              Sign In
+            </button>
+            <button id="logoutButton" style="display: none;" class="signin-btn no-border primary-bg-color off-white">Logout</button>
+            <span id="adminDashboardLink" style="display: none;">
+              <a href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/adminPage.html">Admin Dashboard</a>
+            </span>
+          </div>
+                  
+          </div>
+        </div>
+      </section>
+
+      <div class="movie-details">
+        <div id="movies-container" class="movies-container"></div>
+      </div>
+
+    <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/login.js"></script>
+    <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/bookmark.js"></script>
+    <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/ratings.js"></script>
+    <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/calculateRating.js"></script>
+    <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/details.js"></script>
+</body>
+</html>
