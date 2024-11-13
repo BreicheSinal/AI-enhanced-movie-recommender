@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('movie-genre').textContent = `Genre: ${movie.genre}`;
         document.getElementById('movie-duration').textContent = `Duration: ${movie.duration}`;
         document.getElementById('movie-description').textContent = movie.description;
+
+
+        
+    
     } else {
         console.error(`Movie with ID ${movieId} not found.`);
     }

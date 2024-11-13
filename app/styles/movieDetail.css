@@ -103,8 +103,51 @@
     }
   }
   
+/* Base styling for the hero section */
 
-  .movie-details>h2{
-    display: flex;
-    font-size: 400px;
+  /* Styling for the movie details card */
+  .movie-details {
+    position: absolute;
+    top: 100px; /* Adjust as needed to position the card in front of the hero section */
+    right: 65%;
+    transform: translateX(-50%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 2; /* Ensures it appears on top of the hero section */
+    max-width: 400px;
+    text-align: left;
   }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .movie-details {
+      top: 150px;
+      width: 90%;
+      padding: 15px;
+    }
+  }
+  
+  /* Image styling */
+  .movie-details img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  /* Title and text styling */
+  .movie-details h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    color: #cc0b0b;
+    margin-bottom: 10px;
+  }
+  
+  .movie-details p {
+    font-size: 1em;
+    color: #f8f8f8;
+    margin-bottom: 8px;
+  }
+  
