@@ -113,7 +113,7 @@
     top: 10%;
     position: absolute;
     display: flex;
-    height: 100vh;
+    height: 90%;
     padding-bottom: 80px;
     gap: 100px;
   }
@@ -125,24 +125,18 @@
     align-items: flex-start;
   }
 
-
-
   .movie-description{
     padding-top: 20px;
     font-size: 1.3rem;
   }
   
-  /* Responsive design for smaller screens */
-  
-  /* Image styling */
   .movie-details img {
-    width: 50%;
+    width: auto;
     height: auto;
     border-radius: 8px;
     margin-bottom: 15px;
   }
   
-  /* Title and text styling */
   .movie-details h2 {
     display: flex;
     justify-content: center;
@@ -157,11 +151,26 @@
     margin-bottom: 8px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     .movie-details {
-      top: 150px;
-      width: 90%;
-      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+
+    .movie-details img {
+      width: 70%;
+      align-self: center;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .hero-section2 {
+      height: auto;
+      background: url("../assets/images/IMG-HREO\ SECTION.png") center center /
+        cover no-repeat;
+      background-color: black;
+      overflow-y: scroll;
     }
   }
   
