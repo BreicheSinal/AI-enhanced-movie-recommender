@@ -10,7 +10,6 @@ function renderMovies(movies) {
     movies.forEach(movie => {
         const movieCard = document.createElement('div');
         movieCard.classList.add('movie-card');
-        
         movieCard.innerHTML = `
             <img src="${movie.image_url}" alt="${movie.title}">
             <h3>${movie.title}</h3>
@@ -20,8 +19,11 @@ function renderMovies(movies) {
                 const ratingElement = document.createElement('p');
                 ratingElement.innerText = `Rating: ${movie.rating}/5`;
                 movieCard.appendChild(ratingElement);
-            }
-        ;
+            };
+
+            movieCard.addEventListener('click', () => {
+                console.log('clickeddd');
+            });
         
         carouselContainer.appendChild(movieCard);
     });
@@ -61,26 +63,34 @@ function rotateCarousel() {
             <p>${movie.genre} | ${movie.duration}</p>
         `;
         
+        movieCard.addEventListener('click', () => {
+            console.log('clickeddd');
+        });
+
         carouselContainer.appendChild(movieCard);
     });
 }
 }
 
-function renderNewMovies(newMovies) {
+function renderNewMovies(movies) {
 
-    newMovies=newMovies.slice(23, 40);
+    movies=movies.slice(23, 40);
 
     carouselContainer2.innerHTML = ''; // Clear existing cards
 
-    newMovies.forEach(movie2 => {
+    movies.forEach(movie2 => {
         const movieCard2 = document.createElement('div');
         movieCard2.classList.add('movie-card');
-        
+
         movieCard2.innerHTML = `
             <img src="${movie2.image_url}" alt="${movie2.title}">
             <h3>${movie2.title}</h3>
             <p>${movie2.genre} | ${movie2.duration}</p>
         `;
+
+        movieCard2.addEventListener('click', () => {
+            console.log('clickeddd');
+        });
         
         carouselContainer2.appendChild(movieCard2);
     });
@@ -90,7 +100,7 @@ function renderNewMovies(newMovies) {
 
     document.querySelector('.next-btn2').addEventListener('click', () => {
         currentIndex2++;
-        if (currentIndex2 > newMovies.length - 1) {
+        if (currentIndex2 > movies.length - 1) {
             currentIndex2 = 0;
         }
         rotateCarousel2();
@@ -99,14 +109,14 @@ function renderNewMovies(newMovies) {
     document.querySelector('.prev-btn2').addEventListener('click', () => {
         currentIndex2--;
         if (currentIndex2 < 0) {
-            currentIndex2 = newMovies.length - 1;
+            currentIndex2 = movies.length - 1;
         }
         rotateCarousel2();
     });
 
     function rotateCarousel2() {
         // Shift the array based on the current index
-        const rotatedMovies = [...newMovies.slice(currentIndex2), ...newMovies.slice(0, currentIndex2)];
+        const rotatedMovies = [...movies.slice(currentIndex2), ...movies.slice(0, currentIndex2)];
 
         carouselContainer2.innerHTML = '';
         rotatedMovies.forEach(movie => {
@@ -118,6 +128,10 @@ function renderNewMovies(newMovies) {
                 <h3>${movie.title}</h3>
                 <p>${movie.genre} | ${movie.duration}</p>
             `;
+
+            movieCard.addEventListener('click', () => {
+                console.log('clickeddd');
+            });
             
             carouselContainer2.appendChild(movieCard);
         });
@@ -151,6 +165,10 @@ function renderDramaMovies(movies) {
                 <p>${movie.genre} | ${movie.duration}</p>
             `;
             
+            movieCard.addEventListener('click', () => {
+                console.log('clickeddd');
+            });
+
             carouselContainer3.appendChild(movieCard);
         });
     }
@@ -200,6 +218,10 @@ function renderComedyMovies(movies) {
                 <p>${movie.genre} | ${movie.duration}</p>
             `;
             
+            movieCard.addEventListener('click', () => {
+                console.log('clickeddd');
+            });
+
             carouselContainer4.appendChild(movieCard);
         });
     }
@@ -249,6 +271,10 @@ function renderAnimationMovies(movies) {
                 <p>${movie.genre} | ${movie.duration}</p>
             `;
             
+            movieCard.addEventListener('click', () => {
+                console.log('clickeddd');
+            });
+
             carouselContainer5.appendChild(movieCard);
         });
     }
@@ -283,6 +309,10 @@ function renderAllMovies(movies) {
             <h3>${movie.title}</h3>
             <p>${movie.genre} | ${movie.duration}</p>
         `;
+
+        movieCard.addEventListener('click', () => {
+            console.log('clickeddd');
+        });
         
         carouselContainer6.appendChild(movieCard);
     });
@@ -320,6 +350,10 @@ function renderAllMovies(movies) {
                 <h3>${movie.title}</h3>
                 <p>${movie.genre} | ${movie.duration}</p>
             `;
+
+            movieCard.addEventListener('click', () => {
+                console.log('clickeddd');
+            });
             
             carouselContainer6.appendChild(movieCard);
         });
