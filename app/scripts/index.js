@@ -1,3 +1,8 @@
+const userType = localStorage.getItem('user_type');
+if (userType === 'admin') {
+    document.getElementById('adminDashboardLink').style.display = 'block';
+}
+
 botBttn.addEventListener("click", function () {
   const chatbox = document.getElementById("chatbox");
   console.log("im here");

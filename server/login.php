@@ -1,10 +1,8 @@
 <?php 
-ini_set('session.gc_maxlifetime', 86400);  // 1 day in seconds
-ini_set('session.cookie_lifetime', 86400);  // Also 1 day
+ini_set('session.gc_maxlifetime', 86400);  // 1 day 
+ini_set('session.cookie_lifetime', 86400);  // 1 day
 
 session_start();
-
-
 
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
@@ -43,7 +41,6 @@ if ($result->num_rows === 0) {
     error_log('User fetched: ' . print_r($user, true));
 
     if (password_verify($pass, $user['pass'])) {
-        // Storing user data in session 
         $_SESSION['id'] = $user['id'];
         $_SESSION['username'] = $user['username'];
         $_SESSION['user_type'] = $user['user_type'];
