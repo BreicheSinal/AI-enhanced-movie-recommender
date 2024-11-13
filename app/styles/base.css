@@ -5,15 +5,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
 }
 
 button {
   cursor: pointer;
 }
 
-.subtitle{
-  font-family: 'Roboto Bold';
+.subtitle {
+  font-family: "Roboto Bold";
   color: #cc00aa;
   padding: 25px;
   font-size: 2rem;
