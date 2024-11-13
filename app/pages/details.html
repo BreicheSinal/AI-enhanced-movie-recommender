@@ -3,20 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlickStream</title>
     <link rel="stylesheet" href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/styles/base.css" />
     <link rel="stylesheet" href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/styles/font.css" />
     <link rel="stylesheet" href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/styles/colors.css" />
     <link rel="stylesheet" href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/styles/utilities.css" />
-    <link rel="stylesheet" href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/styles/carousles.css"/>
-    <link rel="stylesheet" href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/styles/reasons.css" />
     <link rel="stylesheet" href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/styles/index.css" />
-    <link rel="stylesheet" href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/styles/footer.css" />
     <link rel="stylesheet" href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/styles/movieDetail.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-    <title>Movie Details</title>
 </head>
 <body>
 
@@ -37,22 +30,19 @@
               <a href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/adminPage.html">Admin Dashboard</a>
             </span>
           </div>
-         
-          <section class="movie-details">
-            <img id="movie-image" class="movie-image" alt="Movie Image">
-            <div>
-              <h2 id="movie-title" class="movie-title"></h2>
-              <p id="movie-genre" class="movie-genre"></p>
-              <p id="movie-duration" class="movie-duration"></p>
-              <p id="movie-description" class="movie-description"></p>
-            </div>
-          </section>
-          
+                  
           </div>
         </div>
       </section>
 
-  
-    <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/movieDetail.js"></script>
+      <div class="movie-details">
+        <div id="movies-container" class="movies-container"></div>
+      </div>
+
+    <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/login.js"></script>
+    <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/bookmark.js"></script>
+    <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/ratings.js"></script>
+    <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/calculateRating.js"></script>
+    <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/details.js"></script>
 </body>
 </html>
