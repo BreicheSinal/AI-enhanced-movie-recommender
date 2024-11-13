@@ -180,3 +180,172 @@ function renderDramaMovies(movies) {
         });
     }
 }
+
+function renderComedyMovies(movies) {
+
+    movies.forEach(movie => {
+        
+        if(movie.genre.toLowerCase().includes('comédie')){
+            console.log(movie.genre);
+            const movieCard = document.createElement('div');
+            movieCard.classList.add('movie-card');
+            
+            movieCard.innerHTML = `
+                <img src="${movie.image_url}" alt="${movie.title}">
+                <h3>${movie.title}</h3>
+                <p>${movie.genre} | ${movie.duration}</p>
+            `;
+            
+            carouselContainer4.appendChild(movieCard);
+        }
+    });
+
+
+    let currentIndex = 0;
+
+    document.querySelector('.next-btn4').addEventListener('click', () => {
+        currentIndex++;
+        if (currentIndex > movies.length - 1) {
+            currentIndex = 0;
+        }
+        rotateCarousel4();
+    });
+
+    document.querySelector('.prev-btn4').addEventListener('click', () => {
+        currentIndex--;
+        if (currentIndex < 0) {
+            currentIndex = movies.length - 1;
+        }
+        rotateCarousel4();
+    });
+
+    function rotateCarousel4() {
+        // Shift the array based on the current index
+        const rotatedMovies = [...movies.slice(currentIndex), ...movies.slice(0, currentIndex)];
+
+        carouselContainer4.innerHTML = '';
+        rotatedMovies.forEach(movie => {
+            const movieCard = document.createElement('div');
+            movieCard.classList.add('movie-card');
+
+            movieCard.innerHTML = `
+                <img src="${movie.image_url}" alt="${movie.title}">
+                <h3>${movie.title}</h3>
+                <p>${movie.genre} | ${movie.duration}</p>
+            `;
+            
+            carouselContainer4.appendChild(movieCard);
+        });
+    }
+}
+
+function renderAnimationMovies(movies) {
+
+    movies.forEach(movie => {
+        
+        if(movie.genre.toLowerCase().includes('animation')){
+            const movieCard = document.createElement('div');
+            movieCard.classList.add('movie-card');
+            
+            movieCard.innerHTML = `
+                <img src="${movie.image_url}" alt="${movie.title}">
+                <h3>${movie.title}</h3>
+                <p>${movie.genre} | ${movie.duration}</p>
+            `;
+            
+            carouselContainer5.appendChild(movieCard);
+        }
+    });
+
+
+    let currentIndex = 0;
+
+    document.querySelector('.next-btn5').addEventListener('click', () => {
+        currentIndex++;
+        if (currentIndex > movies.length - 1) {
+            currentIndex = 0;
+        }
+        rotateCarousel5();
+    });
+
+    document.querySelector('.prev-btn5').addEventListener('click', () => {
+        currentIndex--;
+        if (currentIndex < 0) {
+            currentIndex = movies.length - 1;
+        }
+        rotateCarousel5();
+    });
+
+    function rotateCarousel5() {
+        // Shift the array based on the current index
+        const rotatedMovies = [...movies.slice(currentIndex), ...movies.slice(0, currentIndex)];
+
+        carouselContainer5.innerHTML = '';
+        rotatedMovies.forEach(movie => {
+            const movieCard = document.createElement('div');
+            movieCard.classList.add('movie-card');
+
+            movieCard.innerHTML = `
+                <img src="${movie.image_url}" alt="${movie.title}">
+                <h3>${movie.title}</h3>
+                <p>${movie.genre} | ${movie.duration}</p>
+            `;
+            
+            carouselContainer5.appendChild(movieCard);
+        });
+    }
+}
+
+function renderAllMovies(movies) {
+
+    movies.forEach(movie => {
+        const movieCard = document.createElement('div');
+        movieCard.classList.add('movie-card');
+        
+        movieCard.innerHTML = `
+            <img src="${movie.image_url}" alt="${movie.title}">
+            <h3>${movie.title}</h3>
+            <p>${movie.genre} | ${movie.duration}</p>
+        `;
+        
+        carouselContainer6.appendChild(movieCard);
+    });
+
+
+    let currentIndex = 0;
+
+    document.querySelector('.next-btn6').addEventListener('click', () => {
+        currentIndex++;
+        if (currentIndex > movies.length - 1) {
+            currentIndex = 0;
+        }
+        rotateCarousel6();
+    });
+
+    document.querySelector('.prev-btn6').addEventListener('click', () => {
+        currentIndex--;
+        if (currentIndex < 0) {
+            currentIndex = movies.length - 1;
+        }
+        rotateCarousel6();
+    });
+
+    function rotateCarousel6() {
+        // Shift the array based on the current index
+        const rotatedMovies = [...movies.slice(currentIndex), ...movies.slice(0, currentIndex)];
+
+        carouselContainer6.innerHTML = '';
+        rotatedMovies.forEach(movie => {
+            const movieCard = document.createElement('div');
+            movieCard.classList.add('movie-card');
+
+            movieCard.innerHTML = `
+                <img src="${movie.image_url}" alt="${movie.title}">
+                <h3>${movie.title}</h3>
+                <p>${movie.genre} | ${movie.duration}</p>
+            `;
+            
+            carouselContainer6.appendChild(movieCard);
+        });
+    }
+}

@@ -1,4 +1,4 @@
-.popular-now, .coming-soon, .drama-movies{
+.popular-now, .coming-soon, .drama-movies, .comedy-movies, .animation-movies, .all-movies{
   height: auto;
   width: 100%;
   text-align: center;
@@ -6,13 +6,13 @@
   padding-bottom: 40px;
 }
 
-.popular-now>h2, .coming-soon>h2, .drama-movies>h2{
+.popular-now>h2, .coming-soon>h2, .drama-movies>h2, .comedy-movies>h2, .animation-movies>h2, .all-movies>h2{
   color: #CC00AA;
   padding-top: 30px;
 }
 
 
-.carousel-container, .carousel-container2, .carousel-container3 {
+.carousel-container, .carousel-container2, .carousel-container3, .carousel-container4, .carousel-container5, .carousel-container6 {
   display: flex;
   align-items: center;
   position: relative;
@@ -21,7 +21,7 @@
   padding-left: 30px;
 }
 
-.carousel, .carousel2, .carousel3 {
+.carousel, .carousel2, .carousel3, .carousel4, .carousel5, .carousel6 {
   display: flex;
   gap: 20px;
   transition: transform 0.3s ease-in-out;
@@ -77,7 +77,7 @@
 
 }
 
-.prev-btn, .prev-btn2, .prev-btn3 {
+.prev-btn, .prev-btn2, .prev-btn3, .prev-btn4, .prev-btn5, .prev-btn6 {
   padding: 4px;
   height: 60px;
   margin-right: 10px;
@@ -87,7 +87,7 @@
   left: -5px; 
 }
 
-.next-btn, .next-btn2, .next-btn3 {
+.next-btn, .next-btn2, .next-btn3, .next-btn4, .next-btn5, .next-btn6 {
   padding: 4px;
   height: 60px;
   margin-left: 10px;
@@ -96,6 +96,8 @@
   right: -10px; 
 }
 
-.next-btn:hover, .next-btn2:hover, .next-btn3, .prev-btn:hover, .prev-btn2:hover, .prev-btn3:hover {
+.next-btn:hover, .next-btn2:hover, .next-btn3:hover, .next-btn4:hover, .next-btn5:hover, .next-btn6:hover, 
+.prev-btn:hover, .prev-btn2:hover, .prev-btn3:hover, .prev-btn4:hover, .prev-btn5:hover, .prev-btn6:hover
+{
   background-color: rgba(106, 28, 145, 0.8);
 }
