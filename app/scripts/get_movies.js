@@ -10,6 +10,7 @@ fetch('http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-rec
         const moviesContainer = document.getElementById("movies-container");
 
         renderMovies(movies);
+        renderNewMovies(movies);
 
         movies.forEach(movie => {
             const movieElement = document.createElement('div');
