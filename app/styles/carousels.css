@@ -1,4 +1,9 @@
-.popular-now, .coming-soon, .drama-movies, .comedy-movies, .animation-movies, .all-movies{
+.popular-now,
+.coming-soon,
+.drama-movies,
+.comedy-movies,
+.animation-movies,
+.all-movies {
   height: auto;
   width: 100%;
   text-align: center;
@@ -6,13 +11,24 @@
   padding-bottom: 40px;
 }
 
-.popular-now>h2, .coming-soon>h2, .drama-movies>h2, .comedy-movies>h2, .animation-movies>h2, .all-movies>h2{
-  color: #CC00AA;
+.popular-now > h2,
+.coming-soon > h2,
+.drama-movies > h2,
+.comedy-movies > h2,
+.animation-movies > h2,
+.all-movies > h2 {
+  color: #cc00aa;
   padding-top: 30px;
+  font-family: "Roboto Black";
+  font-size: 2rem;
 }
 
-
-.carousel-container, .carousel-container2, .carousel-container3, .carousel-container4, .carousel-container5, .carousel-container6 {
+.carousel-container,
+.carousel-container2,
+.carousel-container3,
+.carousel-container4,
+.carousel-container5,
+.carousel-container6 {
   display: flex;
   align-items: center;
   position: relative;
@@ -21,13 +37,18 @@
   padding-left: 30px;
 }
 
-.carousel, .carousel2, .carousel3, .carousel4, .carousel5, .carousel6 {
+.carousel,
+.carousel2,
+.carousel3,
+.carousel4,
+.carousel5,
+.carousel6 {
   display: flex;
   gap: 20px;
   transition: transform 0.3s ease-in-out;
 }
 
-.movie-card{
+.movie-card {
   width: 200px;
   background-color: #cc00aa;
   border-radius: 0px;
@@ -35,34 +56,31 @@
   overflow: hidden;
   position: relative;
   color: #ffffff77;
-  
 }
 
-.movie-card img{
+.movie-card img {
   width: 100%;
   height: 309px;
   object-fit: cover;
 }
 
-
 .movie-card .details {
   padding: 10px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .movie-card .details h3 {
   margin: 0;
   font-size: 16px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
-.movie-card .details p{
+.movie-card .details p {
   font-size: 14px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
-  
 
-.prev-btn .next-btn{
+.prev-btn .next-btn {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 10px;
@@ -74,30 +92,48 @@
   transform: translateY(-50%);
   z-index: 10;
   transition: background-color 0.2s ease;
-
 }
 
-.prev-btn, .prev-btn2, .prev-btn3, .prev-btn4, .prev-btn5, .prev-btn6 {
+.prev-btn,
+.prev-btn2,
+.prev-btn3,
+.prev-btn4,
+.prev-btn5,
+.prev-btn6 {
   padding: 4px;
   height: 60px;
   margin-right: 10px;
   box-shadow: #131415;
   border-radius: 20px;
-  background-color: #4F4A4A;
-  left: -5px; 
+  background-color: #4f4a4a;
+  left: -5px;
 }
 
-.next-btn, .next-btn2, .next-btn3, .next-btn4, .next-btn5, .next-btn6 {
+.next-btn,
+.next-btn2,
+.next-btn3,
+.next-btn4,
+.next-btn5,
+.next-btn6 {
   padding: 4px;
   height: 60px;
   margin-left: 10px;
   border-radius: 20px;
-  background-color: #4F4A4A;
-  right: -10px; 
+  background-color: #4f4a4a;
+  right: -10px;
 }
 
-.next-btn:hover, .next-btn2:hover, .next-btn3:hover, .next-btn4:hover, .next-btn5:hover, .next-btn6:hover, 
-.prev-btn:hover, .prev-btn2:hover, .prev-btn3:hover, .prev-btn4:hover, .prev-btn5:hover, .prev-btn6:hover
-{
+.next-btn:hover,
+.next-btn2:hover,
+.next-btn3:hover,
+.next-btn4:hover,
+.next-btn5:hover,
+.next-btn6:hover,
+.prev-btn:hover,
+.prev-btn2:hover,
+.prev-btn3:hover,
+.prev-btn4:hover,
+.prev-btn5:hover,
+.prev-btn6:hover {
   background-color: rgba(106, 28, 145, 0.8);
 }

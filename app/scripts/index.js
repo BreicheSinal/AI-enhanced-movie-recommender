@@ -1,6 +1,6 @@
-const userType = localStorage.getItem('user_type');
-if (userType === 'admin') {
-    document.getElementById('adminDashboardLink').style.display = 'block';
+const userType = localStorage.getItem("user_type");
+if (userType === "admin") {
+  document.getElementById("adminDashboardLink").style.display = "block";
 }
 
 botBttn.addEventListener("click", function () {
@@ -15,6 +15,11 @@ botBttn.addEventListener("click", function () {
 const apiURL = "https://api.openai.com/v1/chat/completions";
 const apiKey =
   "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";
+
+sigIN.addEventListener("click", function () {
+  window.location.href =
+    "http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/login.html";
+});
 
 let msgHistory = [];
 

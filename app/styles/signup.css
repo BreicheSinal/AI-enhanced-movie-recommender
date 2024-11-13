@@ -36,6 +36,8 @@ body {
 }
 .form-group input {
   width: 100%;
+  opacity: 30%;
+
   padding: 8px;
   border: 1px solid #1b1919;
   border-radius: 15px;
@@ -60,7 +62,7 @@ body {
   margin-top: 15px;
 }
 .error-message {
-  color: red;
+  color: #cc00aa;
 }
 .success-message {
   color: rgb(111, 240, 216);
@@ -113,18 +115,16 @@ body {
   margin-top: 15px;
 }
 
-
-a{
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-    margin-top: 30px;
+a {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  margin-top: 30px;
 }
 
-a:hover{
-    color: #26ecb1;
+a:hover {
+  color: #8d0676;
 }
 
-
-.home1{
-    margin-top: 20px;
+.home1 {
+  margin-top: 20px;
 }

@@ -1,34 +1,41 @@
+@import url(font.css);
+
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-color: white;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: black;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: url("../assets/images/IMG-HREO\ SECTION.png") center center;
+  background-color: rgb(0, 0, 0);
 }
 
-
-.usersTable{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 10px;
-    color: white;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    width: 30%;
-    padding: 60px;
-    border: 1px solid #191818;
-    box-shadow: #191818;
-    border-radius: 20px;
-    background-color: #8d0676;
+body > h1 {
+  font-family: "Roboto Black";
+}
+.usersTable {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 30%;
+  padding: 60px;
+  border: 1px solid #191818;
+  box-shadow: #191818;
+  border-radius: 20px;
+  background-color: #8d0676;
 }
 
-
-a{
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-    margin-top: 30px;
+.usersTable th,
+td {
+  padding: 0 15px;
+}
+a {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  margin-top: 30px;
 }
