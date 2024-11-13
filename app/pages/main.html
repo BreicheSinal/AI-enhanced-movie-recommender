@@ -42,7 +42,39 @@
             </div>
           </div>
         </div>
-      </section>    
+    </section>
+      
+    <section name="chatBot">
+        <button id="botBttn" class="botBttn primary-bg-color off-white no-border">
+          UMA
+        </button>
+        <div class="chatbox-wrapper" id="chatbox">
+          <div class="message-box" id="messageBox">
+            <div class="chat flex response">
+              <img src="../assets/images/botlogo.png" alt="Chatbot Icon" />
+              <span
+                >Hello there! <br />
+                How can I help you today?
+              </span>
+            </div>
+          </div>
+          <div class="messagebar flex align-center justify-center">
+            <div class="bar-wrapper flex align-center space-between">
+              <input
+                type="text"
+                id="messageInput"
+                placeholder="Enter your message..."
+              />
+              <button
+                id="sendButton"
+                class="sendBttn flex align-center justify-center"
+              >
+                <span class="material-symbols-rounded"> send </span>
+              </button>
+            </div>
+          </div>
+        </div>
+    </section>
 
       <section class="popular-now">
         <h2>Popular now</h2>
@@ -61,7 +93,7 @@
     <button id="logoutButton">Logout</button>
 
   
-      <footer>
+    <footer>
         <div class="footer-logo-container flex flex-start full-width">
           <img src="../assets/images/logo.png">
           <p>Endless<br>Stories,<br>One Stream</p>
@@ -136,9 +168,9 @@
           <p>Flick Stream Services © 2024 All Rights Reserved</p>
         </div>
   
-      </footer>
+    </footer>
+      <script src="./../scripts/dom.js"></script>
       <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/index.js"></script>
-      <!-- <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/bookmark.js"></script> -->
       <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/login.js"></script>
     <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/main.js"></script> 
     <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/get_movies.js"></script>
