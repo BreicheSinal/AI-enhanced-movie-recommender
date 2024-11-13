@@ -96,7 +96,7 @@
   background: url("../assets/images/pulp-fiction.jpg") center center /
     cover no-repeat;
   background-color: black;
-  background-attachment: fixed;;
+  background-attachment: fixed;
 }
 
 .header {
@@ -146,6 +146,10 @@
     font-family: 'Roboto Medium';
     max-width: 500px;
     text-align: left;
+}
+
+.hero-image{
+  margin-top: 50px !important;
 }
 
 @media (max-width: 1470px) {

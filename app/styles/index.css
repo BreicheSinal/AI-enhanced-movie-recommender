@@ -92,7 +92,7 @@
 
 
 .hero-section {
-  min-height: 100vh;
+  height: 100vh;
   background: url("../assets/images/IMG-HREO\ SECTION.png") center center /
     cover no-repeat;
   background-color: black;
