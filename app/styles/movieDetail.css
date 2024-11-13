@@ -1,0 +1,110 @@
+@import url(font.css);
+
+.hero-section2 {
+    min-height: 100vh;
+    background: url("../assets/images/IMG-HREO\ SECTION.png") center center /
+      cover no-repeat;
+    background-color: black;
+  }
+  
+  .header {
+    padding: 8px 20px 8px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .header h1 {
+    font-size: 23px;
+    font-family: 'Roboto Bold';
+  }
+  
+  .signin-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Roboto Bold';
+  }
+  
+  .hero-content {
+    min-width: 600px;
+  }
+  
+  .hero-content h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-family: 'Roboto Bold';
+  }
+  
+  .hero-content p {
+    font-size: 15x;
+    margin-bottom: 40px;
+    font-family: 'Roboto Bold';
+  }
+  
+  .email-form {
+    gap: 10px;
+  }
+  
+  .email-form input[type="email"] {
+    opacity: 35%;
+    padding: 15px;
+    border-radius: 50px;
+    outline: none;
+    width: 60%;
+    border: 2px solid #cc00aa;
+  }
+  
+  .email-form button {
+    padding: 10px 20px;
+    background-color: #cc00aa;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Roboto Bold';
+  }
+  
+  .email-form button:hover {
+    background-color: #f100c9;
+  }
+  
+  @media (max-width: 1470px) {
+    .hero-content h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 636px) {
+    .content h1 {
+      align-self: center;
+    }
+  
+    .content p {
+      align-self: center;
+    }
+    .hero-content h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  
+    .form {
+      justify-self: center;
+      flex-direction: column;
+    }
+    .email-form input[type="email"] {
+      width: 100%;
+    }
+  }
+  
+
+  .movie-details>h2{
+    display: flex;
+    font-size: 400px;
+  }
