@@ -23,8 +23,7 @@ async function submitLogin() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
     const messageDiv = document.getElementById("message");
-
-    // to reset message
+    
     messageDiv.textContent = "";
 
     try {

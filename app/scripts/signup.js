@@ -21,7 +21,6 @@ async function submitSignup() {
 
         const result = await response.json();
         if (result.success) {
-            //store user ID in local storage 
             localStorage.setItem("user_id", result.user_id);
             messageDiv.className = "success-message";
             messageDiv.textContent = "User created successfully!";

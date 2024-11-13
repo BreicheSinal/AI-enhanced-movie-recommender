@@ -1,6 +1,6 @@
 <?php
 header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: POS,GETT");
+header("Access-Control-Allow-Methods: POST,GET");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Content-Type: application/json");
 
@@ -20,6 +20,10 @@ while ($row = $result->fetch_assoc()) {
     $movies[] = $row;
 }
 
+$response = [
+    "success" => true,
+    "data" => $movies
+];
 echo json_encode($movies);
 
 ?>   
