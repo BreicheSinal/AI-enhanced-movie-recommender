@@ -25,8 +25,8 @@ let msgHistory = [];
 
 sendBtn.onclick = async function () {
   if (messageBar.value.trim().length > 0) {
-    const userMessage = messageBar.value.trim(); 
-    messageBar.value = ""; 
+    const userMessage = messageBar.value.trim();
+    messageBar.value = "";
 
     addUserMessage(userMessage);
     addChatbotPlaceholder();
@@ -86,7 +86,7 @@ function addUserMessage(msg) {
   messageDiv.className = "chat flex align-center message";
 
   const img = document.createElement("img");
-  img.src = "./assets/images/userIcon.png";
+  img.src = "../assets/images/userIcon.png";
 
   const span = document.createElement("span");
   span.textContent = msg;
@@ -102,7 +102,7 @@ function addChatbotPlaceholder() {
   responseDiv.className = "chat flex align-center response";
 
   const img = document.createElement("img");
-  img.src = "./assets/images/botlogo.png";
+  img.src = "../assets/images/botlogo.png";
 
   const span = document.createElement("span");
   span.className = "new";
@@ -128,7 +128,7 @@ async function fetchData(userMsg) {
         {
           role: "system",
           content:
-            "You are a helpful movie assistant. You can answer questions about movies, summarize their plots, and provide personalized movie recommendations based on user preferences. Please provide responses related to movies only.",
+            "You are a helpful movie assistant. You can answer questions about movies, summarize their plots, and provide personalized movie recommendations based on user preferences. Please provide responses related to movies only and user about recommendations.",
         },
         {
           role: "user",
