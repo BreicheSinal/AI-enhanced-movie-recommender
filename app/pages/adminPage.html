@@ -9,9 +9,38 @@
       rel="stylesheet"
       href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/styles/admin.css"
     />
+    <link rel="stylesheet" href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/styles/index.css" />
     <title>Admin Dashboard</title>
   </head>
   <body>
+
+
+    <section name="navHero3">
+      <div
+        class="navHero3 overflow-hidden relative-position text-center black-bg full-width"
+      >
+        <div class="header flex space-between align-center">
+          <div class="flex row justify-center align-center">
+            <img src="../assets/images/logo.png" alt="" />
+            <h1 class="off-white">FlickStream</h1>
+          </div>
+          <a
+          href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/main.html"
+          >HOME</a
+        >
+          <a href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/bookmarked.html" id="bookmarksButton" style="display: none;">Bookmarks</a>
+          <button id="signin-btn" class="signin-btn no-border primary-bg-color off-white">
+            Sign In
+          </button>
+          <button id="logoutButton" style="display: none;" class="signin-btn no-border primary-bg-color off-white">Logout</button>
+          <span id="adminDashboardLink" style="display: none;">
+            <a href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/adminPage.html">Admin Dashboard</a>
+          </span>
+        </div>
+                
+        </div>
+      </div>
+    </section>
     <h1>Admin Dashboard</h1>
     <table id="usersTable" class="usersTable full-width">
       <tr>
@@ -21,13 +50,9 @@
       </tr>
     </table>
 
-    <div class="home1">
-      <a
-        href="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/index.html"
-        >Home</a
-      >
-    </div>
+  
 
     <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/admin.js"></script>
+    <script src="http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/scripts/login.js"></script>
   </body>
 </html>

@@ -1,5 +1,16 @@
 .popular-now,
-.coming-soon,
+.coming-soon{
+  height: auto;
+  width: 100%;
+  text-align: center;
+  background-color: #131415;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.popular-now2,
+.coming-soon2,
 .drama-movies,
 .comedy-movies,
 .animation-movies,
@@ -9,7 +20,10 @@
   text-align: center;
   background-color: #131415;
   padding-bottom: 40px;
+  /* display: flex;
+  justify-content: center; */
 }
+
 
 .popular-now > h2,
 .coming-soon > h2,
@@ -17,6 +31,24 @@
 .comedy-movies > h2,
 .animation-movies > h2,
 .all-movies > h2 {
+  color: #cc00aa;
+  padding-top: 30px;
+  font-family: "Roboto Black";
+  font-size: 2rem;
+}
+
+.popular-now2 > h2,
+.coming-soon2 > h2{
+  color: #cc00aa;
+  padding-top: 30px;
+  font-family: "Roboto Black";
+  font-size: 2rem;
+}
+
+.pop1{
+  text-align: center;
+  background-color: #131415;
+  padding-bottom: 40px;
   color: #cc00aa;
   padding-top: 30px;
   font-family: "Roboto Black";
@@ -46,34 +78,47 @@
   display: flex;
   gap: 20px;
   transition: transform 0.3s ease-in-out;
+  overflow-x:hidden;
+  padding: 20px 0;
+  justify-content: center;
 }
 
 .movie-card {
   width: 200px;
-  background-color: #cc00aa;
-  border-radius: 0px;
+  background-color: #cc00aa7e;
+  border-radius: 10px; /* Rounded corners for the card */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-10px); /* Slight lift effect on hover */
 }
 
 .movie-card img {
   width: 100%;
   height: 309px;
   object-fit: cover;
+  border-bottom: 2px solid #131415; /* Border below the image */
 }
 
 .movie-card .details {
   padding: 10px;
   font-family: "Roboto Medium";
-  color: #131415;
+  color: #fff;
+  font-size: 14px;
 }
-
-.movie-card .details h3 {
-  margin: 0;
-  font-size: 16px;
-  font-family: "Roboto Medium";
-  color: #131415;
+.movie-card h3 {
+  font-size: 1.2rem;
+  color: #f0efef;
+  margin: 10px 0;
+  font-family: "Roboto Black";
 }
 
 .movie-card .details p {
@@ -81,6 +126,28 @@
   font-family: "Roboto Medium";
   color: #131415;
 }
+
+
+
+.view-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ffffff96;
+    color: #cc00aa;
+    border: none;
+    border-radius: 5px;
+    font-family: "Roboto Medium";
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.view-button:hover {
+    background-color: #cc00aa;
+    color: #fff;
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
 
 .prev-btn .next-btn {
   background-color: rgba(0, 0, 0, 0.5);

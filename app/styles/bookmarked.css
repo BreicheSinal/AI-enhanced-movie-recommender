@@ -15,9 +15,10 @@ header {
 }
 
 header a {
-    color: #ffcc00;
+    color: #cc00aaa6;
     text-decoration: none;
 }
+
 
 .bookmarked-movies-container {
     padding: 20px;
