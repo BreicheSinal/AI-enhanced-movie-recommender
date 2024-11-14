@@ -184,9 +184,7 @@
       background-color: black;
       overflow-y: scroll;
     }
-  }
 
-  @media (max-width: 850px) {
     .movies-container >div {
       display: flex;
       flex-direction: column;
