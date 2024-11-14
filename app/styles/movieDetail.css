@@ -116,6 +116,7 @@
     height: 90%;
     padding-bottom: 80px;
     gap: 100px;
+    padding-top: 60px;
   }
 
   .movie-details > div{
@@ -159,7 +160,7 @@
 
   .bookmarkStarsDiv{
     position: absolute;
-    top: 66%;
+    top: 70%;
     left: 26%;
   }
 
@@ -198,12 +199,17 @@
       border-radius: 8px;
     }
     
-    .hero-section2 {
-      height: auto;
+    .movie-details {
       background: url("../assets/images/IMG-HREO\ SECTION.png") center center /
         cover no-repeat;
       background-color: black;
       overflow-y: scroll;
+      margin-top: 35px;
+    }
+    .bookmarkStarsDiv{
+      position: absolute;
+      top: 1%;
+      left: 35%;
     }
   }
   
