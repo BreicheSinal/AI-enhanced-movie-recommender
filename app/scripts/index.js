@@ -2,10 +2,7 @@ const userType = localStorage.getItem("user_type");
 if (userType === "admin") {
   document.getElementById("adminDashboardLink").style.display = "block";
 }
-getStarted.addEventListener("click", function () {
-  window.location.href =
-    "http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/signup.html";
-});
+
 botBttn.addEventListener("click", function () {
   const chatbox = document.getElementById("chatbox");
   console.log("im here");
