@@ -55,7 +55,6 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   position: relative;
-  color: #ffffff77;
 }
 
 .movie-card img {
@@ -66,18 +65,21 @@
 
 .movie-card .details {
   padding: 10px;
-  color: #ffffff;
+  font-family: "Roboto Medium";
+  color: #131415;
 }
 
 .movie-card .details h3 {
   margin: 0;
   font-size: 16px;
-  color: #ffffff;
+  font-family: "Roboto Medium";
+  color: #131415;
 }
 
 .movie-card .details p {
   font-size: 14px;
-  color: #ffffff;
+  font-family: "Roboto Medium";
+  color: #131415;
 }
 
 .prev-btn .next-btn {
