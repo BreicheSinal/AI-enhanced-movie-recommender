@@ -1,0 +1,55 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; 
+    color: black; 
+    background-color: black;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.bookmarked-movies-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.bookmarked-movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.movie {
+    background-color: #cc00aa34;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.movie img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.movie h3 {
+    margin: 10px 0;
+    color: #cc00aa;
+}
+
+.movie p {
+    color: #f5f0f0;
+}

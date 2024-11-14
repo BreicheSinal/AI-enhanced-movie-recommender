@@ -4,6 +4,18 @@ function showDetails(movie){
     window.location.href = 'http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/app/pages/details.html';
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const bookmarksButton = document.getElementById('bookmarksButton');
+    
+    const userId = localStorage.getItem('user_id');
+    
+    if (userId) {
+        bookmarksButton.style.display = 'inline-block';
+    } else {
+        bookmarksButton.style.display = 'none';
+    }
+});
+
 const movieData = localStorage.getItem('selectedMovie');
 const movie = JSON.parse(movieData);
 
