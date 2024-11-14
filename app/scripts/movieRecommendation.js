@@ -2,20 +2,23 @@ window.onload = function () {
   const userId = localStorage.getItem("user_id");
 
   if (userId) {
-    // Fetching movies based on bookmarked genres
-    fetch(
-      `http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/server/fetch_bookmarked.php?user_id=${userId}`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        const recommendedSection = document.getElementById("recommended");
+    // fetching and displaying recommended movies
+    function fetchRecommendedMovies() {
+      fetch(
+        `http://localhost/AI-enhanced-movie-recommender-main/AI-enhanced-movie-recommender/server/fetch_bookmarked.php?user_id=${userId}`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          const recommendedSection = document.getElementById("recommended");
 
-        // Loop through the movie data and create movie cards
-        data.forEach((movie) => {
-          const movieCard = document.createElement("div");
-          movieCard.classList.add("movie-card");
+          recommendedSection.innerHTML = "";
 
-          movieCard.innerHTML = `
+          // looping through the movie data and create movie cards
+          data.forEach((movie) => {
+            const movieCard = document.createElement("div");
+            movieCard.classList.add("movie-card");
+
+            movieCard.innerHTML = `
                 <img src="${movie.image_url}" alt="${movie.title}">
                 <div class="movie-info">
                   <h4>${movie.title}</h4>
@@ -24,13 +27,19 @@ window.onload = function () {
                 </div>
               `;
 
-          // Append the movie card to the recommended section
-          recommendedSection.appendChild(movieCard);
-        });
-      })
-      .catch((error) =>
-        console.error("Error fetching recommended movies:", error)
-      );
+            // appending the movie card to the recommended section
+            recommendedSection.appendChild(movieCard);
+          });
+        })
+        .catch((error) =>
+          console.error("Error fetching recommended movies:", error)
+        );
+    }
+
+    fetchRecommendedMovies();
+
+    // setting an interval to fetch new recommended movies 
+    setInterval(fetchRecommendedMovies, 700); 
   } else {
     console.log("User ID not found in localStorage.");
   }
